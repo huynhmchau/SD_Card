@@ -1,0 +1,19 @@
+module sd_card(
+	input CLOCK_50,
+	input SD_DAT0,	//MISO
+	output SD_CLK,	//SDCLK
+	output SD_CMD,	//MOSI
+	output SD_DAT3,	//CS
+	output[15:0] LEDR
+);
+
+wire sd_clk_wire, gate_sig_wire;
+wire _250k_clk, gated_50M;
+
+sd_controller sd_contr(CLOCK_50, sd_clk_wire, gate_sig_wire);
+and andgate(gated_50M, CLOCK_50, gate_sig_wire);
+clock_divisor clk_div(gated_50M, _250k_clk);
+sd_interface sd_int(_250k_clk, SD_DAT0, SD_DAT3, MOSI_bit, SD_CLK, LEDR[15:0]);
+
+
+endmodule

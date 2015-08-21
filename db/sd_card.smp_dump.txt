@@ -1,0 +1,7 @@
+
+State Machine - |sd_card|sd_interface:sd_int|init_block:init|state
+Name state.END state.READ_RESP state.SEND_CMD0 state.WAIT_74_CYCLE 
+state.WAIT_74_CYCLE 0 0 0 0 
+state.SEND_CMD0 0 0 1 1 
+state.READ_RESP 0 1 0 1 
+state.END 1 0 0 1 
