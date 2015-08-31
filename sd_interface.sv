@@ -5,12 +5,13 @@ module sd_interface(
 	output CS_bit,
 	output MOSI_bit,
 	output out_250k_clk,
-	output [15:0] response_LED
+	output [15:0] response_LED,
+	output test_out
 );
 
 wire clk_invert;
 
-init_block init(input_slow_clk, clk_invert, MISO_bit, resend, CS_bit, MOSI_bit, response_LED);
+init_block init(input_slow_clk, clk_invert, MISO_bit, resend, CS_bit, MOSI_bit, response_LED, test_out);
 
 assign clk_invert = ~input_slow_clk;
 assign out_250k_clk = input_slow_clk;

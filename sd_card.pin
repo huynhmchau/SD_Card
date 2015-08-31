@@ -471,7 +471,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : G12       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : G13       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G14       :        :                   :         : 8         :                
 LEDR[15]                     : G15       : output : 3.3-V LVTTL       :         : 7         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7         :                
+LEDR[16]                     : G16       : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDR[9]                      : G17       : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 7         :                
 LEDR[0]                      : G19       : output : 3.3-V LVTTL       :         : 7         : Y              
@@ -498,7 +498,7 @@ VCCIO8                       : H11       : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : H12       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H13       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7         :                
+LEDR[17]                     : H15       : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDR[11]                     : H16       : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDR[13]                     : H17       : output : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : H18       : power  :                   : 3.3V    : 7         :                
