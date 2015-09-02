@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sd_card
-Thu Sep 03 05:06:45 2015
+Thu Sep 03 05:36:42 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -48,7 +48,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 03 05:06:45 2015      ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 03 05:36:42 2015      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; sd_card                                    ;
 ; Top-level Entity Name              ; sd_card                                    ;
@@ -328,14 +328,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Sep 03 05:06:43 2015
+    Info: Processing started: Thu Sep 03 05:36:41 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sd_card -c sd_card
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file sd_interface.sv
     Info (12023): Found entity 1: sd_interface
 Info (12021): Found 1 design units, including 1 entities, in source file init_block.sv
     Info (12023): Found entity 1: init_block
-Warning (10229): Verilog HDL Expression warning at sd_controller.sv(23): truncated literal to match 8 bits
 Info (12021): Found 1 design units, including 1 entities, in source file sd_controller.sv
     Info (12023): Found entity 1: sd_controller
 Info (12021): Found 1 design units, including 1 entities, in source file sd_card.sv
@@ -348,12 +347,12 @@ Info (12127): Elaborating entity "sd_card" for the top level hierarchy
 Warning (10034): Output port "LEDR[16]" at sd_card.sv(8) has no driver
 Info (12128): Elaborating entity "sd_controller" for hierarchy "sd_controller:sd_contr"
 Warning (10230): Verilog HDL assignment warning at sd_controller.sv(22): truncated value with size 32 to match size of target (16)
-Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(34): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at sd_controller.sv(34): truncated value with size 32 to match size of target (1)
+Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(35): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10230): Verilog HDL assignment warning at sd_controller.sv(35): truncated value with size 32 to match size of target (1)
-Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(39): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at sd_controller.sv(39): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at sd_controller.sv(36): truncated value with size 32 to match size of target (1)
+Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(40): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10230): Verilog HDL assignment warning at sd_controller.sv(40): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at sd_controller.sv(41): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "edge_detect" for hierarchy "sd_controller:sd_contr|edge_detect:edged"
 Info (12128): Elaborating entity "clock_divisor" for hierarchy "clock_divisor:clk_div"
 Warning (10230): Verilog HDL assignment warning at clock_divisor.sv(15): truncated value with size 32 to match size of target (16)
@@ -395,10 +394,10 @@ Info (21057): Implemented 235 device resources after synthesis - the final resou
     Info (21059): Implemented 20 output pins
     Info (21060): Implemented 4 bidirectional pins
     Info (21061): Implemented 208 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
     Info: Peak virtual memory: 471 megabytes
-    Info: Processing ended: Thu Sep 03 05:06:45 2015
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Thu Sep 03 05:36:42 2015
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

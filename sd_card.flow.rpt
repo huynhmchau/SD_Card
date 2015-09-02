@@ -1,5 +1,5 @@
 Flow report for sd_card
-Thu Sep 03 05:07:18 2015
+Thu Sep 03 05:37:14 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,14 +40,14 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 03 05:07:14 2015      ;
+; Flow Status                        ; Successful - Thu Sep 03 05:37:09 2015      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; sd_card                                    ;
 ; Top-level Entity Name              ; sd_card                                    ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 193 / 114,480 ( < 1 % )                    ;
+; Total logic elements               ; 194 / 114,480 ( < 1 % )                    ;
 ;     Total combinational functions  ; 184 / 114,480 ( < 1 % )                    ;
 ;     Dedicated logic registers      ; 143 / 114,480 ( < 1 % )                    ;
 ; Total registers                    ; 143                                        ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/03/2015 05:06:44 ;
+; Start date & time ; 09/03/2015 05:36:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sd_card             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 220811307037641.144122800410192 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 220811307037641.144122980109520 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 459 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:20     ; 1.0                     ; 919 MB              ; 00:00:20                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 450 MB              ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 459 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 911 MB              ; 00:00:19                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 454 MB              ; 00:00:05                           ;
 ; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 532 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:30                           ;
+; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:29                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

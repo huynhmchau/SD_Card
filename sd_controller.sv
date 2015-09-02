@@ -20,7 +20,8 @@ always @(posedge CLOCK_50)begin
 	if(start_btn == 0)begin
 		state <= next_state;
 		if(state == EDGE_DETECT) edge_counter <= edge_counter + 1;
-		if(edge_counter > 193 && response_signal[11:0] == 8'b000110101010) gate_signal <= 0;
+		if(edge_counter > 193 && response_signal[11:0] == 12'b000110101010) gate_signal <= 0;
+		//if(edge_counter > 130 && response_signal[7:0] == 8'b00000001) gate_signal <= 0;
 		//if(edge_counter > 145) gate_signal <= 0;
 		else gate_signal <= 1;
 	end

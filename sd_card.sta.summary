@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'sd_interface:sd_int|init_block:init|state.END'
-Slack : -4.062
-TNS   : -22.307
+Slack : -4.096
+TNS   : -22.614
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divisor:clk_div|clk_250k'
-Slack : -2.825
-TNS   : -166.326
+Slack : -2.809
+TNS   : -185.957
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -2.294
-TNS   : -48.259
+Slack : -2.223
+TNS   : -46.941
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : -1.216
-TNS   : -1.357
+Slack : -1.309
+TNS   : -1.309
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divisor:clk_div|clk_250k'
-Slack : -0.501
-TNS   : -18.684
+Slack : -0.203
+TNS   : -9.098
 
 Type  : Slow 1200mV 85C Model Hold 'sd_interface:sd_int|init_block:init|state.END'
-Slack : 0.916
+Slack : 0.939
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
@@ -35,31 +35,31 @@ Slack : -1.285
 TNS   : -136.210
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sd_interface:sd_int|init_block:init|state.END'
-Slack : 0.440
+Slack : 0.409
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'sd_interface:sd_int|init_block:init|state.END'
-Slack : -3.619
-TNS   : -19.896
+Slack : -3.617
+TNS   : -20.090
 
 Type  : Slow 1200mV 0C Model Setup 'clock_divisor:clk_div|clk_250k'
-Slack : -2.498
-TNS   : -148.834
+Slack : -2.490
+TNS   : -165.737
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -2.004
-TNS   : -39.946
+Slack : -1.946
+TNS   : -38.557
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.975
-TNS   : -1.025
+Slack : -1.100
+TNS   : -1.100
 
 Type  : Slow 1200mV 0C Model Hold 'clock_divisor:clk_div|clk_250k'
-Slack : -0.465
-TNS   : -16.797
+Slack : -0.203
+TNS   : -8.197
 
 Type  : Slow 1200mV 0C Model Hold 'sd_interface:sd_int|init_block:init|state.END'
-Slack : 0.844
+Slack : 0.854
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -71,43 +71,43 @@ Slack : -1.285
 TNS   : -136.210
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sd_interface:sd_int|init_block:init|state.END'
-Slack : 0.426
+Slack : 0.472
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'sd_interface:sd_int|init_block:init|state.END'
-Slack : -1.488
-TNS   : -7.792
+Slack : -1.501
+TNS   : -7.928
 
 Type  : Fast 1200mV 0C Model Setup 'clock_divisor:clk_div|clk_250k'
-Slack : -0.916
-TNS   : -38.473
+Slack : -0.879
+TNS   : -50.636
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.586
-TNS   : -6.102
+Slack : -0.563
+TNS   : -5.938
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.812
-TNS   : -0.942
+Slack : -0.877
+TNS   : -0.964
 
 Type  : Fast 1200mV 0C Model Hold 'clock_divisor:clk_div|clk_250k'
-Slack : -0.352
-TNS   : -12.648
+Slack : -0.232
+TNS   : -5.881
 
 Type  : Fast 1200mV 0C Model Hold 'sd_interface:sd_int|init_block:init|state.END'
-Slack : 0.430
+Slack : 0.447
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -47.497
+TNS   : -49.257
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divisor:clk_div|clk_250k'
 Slack : -1.000
 TNS   : -106.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sd_interface:sd_int|init_block:init|state.END'
-Slack : 0.324
+Slack : 0.322
 TNS   : 0.000
 
 ------------------------------------------------------------
