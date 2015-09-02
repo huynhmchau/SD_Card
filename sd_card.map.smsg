@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at init_block.sv(22): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at init_block.sv(84): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at init_block.sv(24): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at init_block.sv(104): always construct contains both blocking and non-blocking assignments
