@@ -1,5 +1,5 @@
 Fitter report for sd_card
-Thu Sep 03 05:37:03 2015
+Thu Sep 10 02:42:56 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -70,18 +70,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Sep 03 05:37:03 2015      ;
+; Fitter Status                      ; Successful - Thu Sep 10 02:42:56 2015      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; sd_card                                    ;
 ; Top-level Entity Name              ; sd_card                                    ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 194 / 114,480 ( < 1 % )                    ;
-;     Total combinational functions  ; 184 / 114,480 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 143 / 114,480 ( < 1 % )                    ;
-; Total registers                    ; 143                                        ;
-; Total pins                         ; 27 / 529 ( 5 % )                           ;
+; Total logic elements               ; 230 / 114,480 ( < 1 % )                    ;
+;     Total combinational functions  ; 209 / 114,480 ( < 1 % )                    ;
+;     Dedicated logic registers      ; 146 / 114,480 ( < 1 % )                    ;
+; Total registers                    ; 146                                        ;
+; Total pins                         ; 24 / 529 ( 5 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
@@ -182,8 +182,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; LEDR[13]  ; Missing drive strength ;
 ; LEDR[14]  ; Missing drive strength ;
 ; LEDR[15]  ; Missing drive strength ;
-; LEDR[16]  ; Missing drive strength ;
-; LEDR[17]  ; Missing drive strength ;
 ; SD_DAT[1] ; Missing drive strength ;
 ; SD_DAT[2] ; Missing drive strength ;
 ; SD_DAT[0] ; Missing drive strength ;
@@ -371,6 +369,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location     ;                ;              ; IRDA_TXD      ; PIN_AE24      ; QSF Assignment ;
 ; Location     ;                ;              ; KEY[0]        ; PIN_M23       ; QSF Assignment ;
 ; Location     ;                ;              ; KEY[1]        ; PIN_M21       ; QSF Assignment ;
+; Location     ;                ;              ; KEY[2]        ; PIN_N21       ; QSF Assignment ;
 ; Location     ;                ;              ; LCD_BLON      ; PIN_K2        ; QSF Assignment ;
 ; Location     ;                ;              ; LCD_DATA[0]   ; PIN_J1        ; QSF Assignment ;
 ; Location     ;                ;              ; LCD_DATA[1]   ; PIN_J2        ; QSF Assignment ;
@@ -393,6 +392,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location     ;                ;              ; LEDG[6]       ; PIN_G22       ; QSF Assignment ;
 ; Location     ;                ;              ; LEDG[7]       ; PIN_G21       ; QSF Assignment ;
 ; Location     ;                ;              ; LEDG[8]       ; PIN_F17       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[16]      ; PIN_G16       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[17]      ; PIN_H15       ; QSF Assignment ;
 ; Location     ;                ;              ; OTG_ADDR[0]   ; PIN_K7        ; QSF Assignment ;
 ; Location     ;                ;              ; OTG_ADDR[1]   ; PIN_F2        ; QSF Assignment ;
 ; Location     ;                ;              ; OTG_CS_N      ; PIN_F1        ; QSF Assignment ;
@@ -643,6 +644,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O Standard ; sd_card        ;              ; I2C_SDAT      ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; KEY[0]        ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; KEY[1]        ; 3.3-V LVTTL   ; QSF Assignment ;
+; I/O Standard ; sd_card        ;              ; KEY[2]        ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; LEDG[0]       ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; LEDG[1]       ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; LEDG[2]       ; 3.3-V LVTTL   ; QSF Assignment ;
@@ -652,6 +654,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O Standard ; sd_card        ;              ; LEDG[6]       ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; LEDG[7]       ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; LEDG[8]       ; 3.3-V LVTTL   ; QSF Assignment ;
+; I/O Standard ; sd_card        ;              ; LEDR[16]      ; 3.3-V LVTTL   ; QSF Assignment ;
+; I/O Standard ; sd_card        ;              ; LEDR[17]      ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; PS2_CLK       ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; PS2_DAT       ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; sd_card        ;              ; SW[1]         ; 3.3-V LVTTL   ; QSF Assignment ;
@@ -708,8 +712,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 399 ) ; 0.00 % ( 0 / 399 )         ; 0.00 % ( 0 / 399 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 399 ) ; 0.00 % ( 0 / 399 )         ; 0.00 % ( 0 / 399 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 422 ) ; 0.00 % ( 0 / 422 )         ; 0.00 % ( 0 / 422 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 422 ) ; 0.00 % ( 0 / 422 )         ; 0.00 % ( 0 / 422 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -732,7 +736,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 389 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 412 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -748,28 +752,28 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 194 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 51                      ;
-;     -- Register only                        ; 10                      ;
-;     -- Combinational with a register        ; 133                     ;
+; Total logic elements                        ; 230 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 84                      ;
+;     -- Register only                        ; 21                      ;
+;     -- Combinational with a register        ; 125                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 86                      ;
-;     -- 3 input functions                    ; 17                      ;
-;     -- <=2 input functions                  ; 81                      ;
-;     -- Register only                        ; 10                      ;
+;     -- 4 input functions                    ; 90                      ;
+;     -- 3 input functions                    ; 36                      ;
+;     -- <=2 input functions                  ; 83                      ;
+;     -- Register only                        ; 21                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 140                     ;
+;     -- normal mode                          ; 165                     ;
 ;     -- arithmetic mode                      ; 44                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 143 / 117,053 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 143 / 114,480 ( < 1 % ) ;
+; Total registers*                            ; 146 / 117,053 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 146 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 16 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 19 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
-; I/O pins                                    ; 27 / 529 ( 5 % )        ;
+; I/O pins                                    ; 24 / 529 ( 5 % )        ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )           ;
 ;                                             ;                         ;
@@ -785,11 +789,11 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%            ;
-; Peak interconnect usage (total/H/V)         ; 1% / 2% / 1%            ;
-; Maximum fan-out                             ; 106                     ;
-; Highest non-global fan-out                  ; 57                      ;
-; Total fan-out                               ; 1073                    ;
-; Average fan-out                             ; 2.62                    ;
+; Peak interconnect usage (total/H/V)         ; 2% / 2% / 1%            ;
+; Maximum fan-out                             ; 109                     ;
+; Highest non-global fan-out                  ; 51                      ;
+; Total fan-out                               ; 1096                    ;
+; Average fan-out                             ; 2.48                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -802,29 +806,29 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 194 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 51                     ; 0                              ;
-;     -- Register only                        ; 10                     ; 0                              ;
-;     -- Combinational with a register        ; 133                    ; 0                              ;
+; Total logic elements                        ; 230 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 84                     ; 0                              ;
+;     -- Register only                        ; 21                     ; 0                              ;
+;     -- Combinational with a register        ; 125                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 86                     ; 0                              ;
-;     -- 3 input functions                    ; 17                     ; 0                              ;
-;     -- <=2 input functions                  ; 81                     ; 0                              ;
-;     -- Register only                        ; 10                     ; 0                              ;
+;     -- 4 input functions                    ; 90                     ; 0                              ;
+;     -- 3 input functions                    ; 36                     ; 0                              ;
+;     -- <=2 input functions                  ; 83                     ; 0                              ;
+;     -- Register only                        ; 21                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 140                    ; 0                              ;
+;     -- normal mode                          ; 165                    ; 0                              ;
 ;     -- arithmetic mode                      ; 44                     ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 143                    ; 0                              ;
-;     -- Dedicated logic registers            ; 143 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 146                    ; 0                              ;
+;     -- Dedicated logic registers            ; 146 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 16 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 19 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
-; I/O pins                                    ; 27                     ; 0                              ;
+; I/O pins                                    ; 24                     ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )        ; 0 / 532 ( 0 % )                ;
 ; Total memory bits                           ; 0                      ; 0                              ;
 ; Total RAM block bits                        ; 0                      ; 0                              ;
@@ -837,16 +841,16 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1068                   ; 5                              ;
-;     -- Registered Connections               ; 439                    ; 0                              ;
+;     -- Total Connections                    ; 1091                   ; 5                              ;
+;     -- Registered Connections               ; 450                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 8                      ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Partition Interface                         ;                        ;                                ;
-;     -- Input Ports                          ; 3                      ; 0                              ;
-;     -- Output Ports                         ; 20                     ; 0                              ;
+;     -- Input Ports                          ; 2                      ; 0                              ;
+;     -- Output Ports                         ; 18                     ; 0                              ;
 ;     -- Bidir Ports                          ; 4                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Registered Ports                            ;                        ;                                ;
@@ -871,8 +875,7 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; CLOCK_50 ; Y2    ; 2        ; 0            ; 36           ; 14           ; 21                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
-; KEY[2]   ; N21   ; 6        ; 115          ; 42           ; 14           ; 42                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
-; KEY[3]   ; R24   ; 5        ; 115          ; 35           ; 21           ; 24                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
+; KEY[3]   ; R24   ; 5        ; 115          ; 35           ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -888,8 +891,6 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; LEDR[13] ; H17   ; 7        ; 67           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LEDR[14] ; F15   ; 7        ; 58           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LEDR[15] ; G15   ; 7        ; 65           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; LEDR[16] ; G16   ; 7        ; 67           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; LEDR[17] ; H15   ; 7        ; 60           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LEDR[1]  ; F19   ; 7        ; 94           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LEDR[2]  ; E19   ; 7        ; 94           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LEDR[3]  ; F21   ; 7        ; 107          ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -947,8 +948,8 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; 3        ; 6 / 73 ( 8 % )   ; 3.3V          ; --           ;
 ; 4        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
 ; 5        ; 1 / 65 ( 2 % )   ; 3.3V          ; --           ;
-; 6        ; 2 / 58 ( 3 % )   ; 3.3V          ; --           ;
-; 7        ; 18 / 72 ( 25 % ) ; 3.3V          ; --           ;
+; 6        ; 1 / 58 ( 2 % )   ; 2.5V          ; --           ;
+; 7        ; 16 / 72 ( 22 % ) ; 3.3V          ; --           ;
 ; 8        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -1233,7 +1234,7 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; B25      ; 406        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B26      ; 401        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; B28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C1       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C2       ; 1          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C3       ; 543        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1361,7 +1362,7 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; G13      ; 493        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G14      ; 484        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G15      ; 457        ; 7        ; LEDR[15]                                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; G16      ; 453        ; 7        ; LEDR[16]                                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; G16      ; 453        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G17      ; 437        ; 7        ; LEDR[9]                                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; G18      ; 452        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G19      ; 451        ; 7        ; LEDR[0]                                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -1388,7 +1389,7 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; H12      ; 507        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H13      ; 494        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H14      ; 480        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H15      ; 464        ; 7        ; LEDR[17]                                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; H15      ; 464        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H16      ; 459        ; 7        ; LEDR[11]                                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; H17      ; 454        ; 7        ; LEDR[13]                                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; H18      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1401,7 +1402,7 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; H25      ; 377        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H26      ; 376        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; H28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J1       ; 64         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J3       ; 23         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1453,7 +1454,7 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; K21      ; 389        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K22      ; 388        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K23      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; K24      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; K24      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; K25      ; 371        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K26      ; 370        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K27      ; 362        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1534,14 +1535,14 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; N18      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N19      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N20      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; N21      ; 348        ; 6        ; KEY[2]                                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; N21      ; 348        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N22      ; 340        ; 6        ; ^MSEL0                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N23      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N24      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; N24      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; N25      ; 352        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N26      ; 351        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; N28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; P1       ; 53         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P2       ; 52         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P3       ; 55         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
@@ -1569,7 +1570,7 @@ The pin-out file can be found in C:/Users/user/Desktop/SD_CARD/sd_card.pin.
 ; P25      ; 346        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P26      ; 345        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P27      ; 350        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; P28      ; 349        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P28      ; 349        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R1       ; 68         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R2       ; 67         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R3       ; 73         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1747,12 +1748,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                               ; Library Name ;
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------+--------------+
-; |sd_card                    ; 194 (1)     ; 143 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 27   ; 0            ; 51 (1)       ; 10 (0)            ; 133 (1)          ; |sd_card                                          ; work         ;
+; |sd_card                    ; 230 (1)     ; 146 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 24   ; 0            ; 84 (1)       ; 21 (0)            ; 125 (0)          ; |sd_card                                          ; work         ;
 ;    |clock_divisor:clk_div|  ; 27 (27)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 1 (1)             ; 16 (16)          ; |sd_card|clock_divisor:clk_div                    ; work         ;
-;    |sd_controller:sd_contr| ; 32 (30)     ; 20 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 2 (0)             ; 24 (24)          ; |sd_card|sd_controller:sd_contr                   ; work         ;
+;    |sd_controller:sd_contr| ; 27 (25)     ; 20 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 2 (0)             ; 18 (18)          ; |sd_card|sd_controller:sd_contr                   ; work         ;
 ;       |edge_detect:edged|   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; |sd_card|sd_controller:sd_contr|edge_detect:edged ; work         ;
-;    |sd_interface:sd_int|    ; 140 (0)     ; 106 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 34 (0)       ; 7 (0)             ; 99 (0)           ; |sd_card|sd_interface:sd_int                      ; work         ;
-;       |init_block:init|     ; 140 (140)   ; 106 (106)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 34 (34)      ; 7 (7)             ; 99 (99)          ; |sd_card|sd_interface:sd_int|init_block:init      ; work         ;
+;    |sd_interface:sd_int|    ; 175 (0)     ; 109 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (0)       ; 18 (0)            ; 91 (0)           ; |sd_card|sd_interface:sd_int                      ; work         ;
+;       |init_block:init|     ; 175 (175)   ; 109 (109)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (66)      ; 18 (18)           ; 91 (91)          ; |sd_card|sd_interface:sd_int|init_block:init      ; work         ;
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1780,98 +1781,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[13]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[14]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[15]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; LEDR[16]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; LEDR[17]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SD_DAT[1] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; SD_DAT[2] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; SD_DAT[0] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SD_DAT[3] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; KEY[2]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; CLOCK_50  ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; KEY[3]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; KEY[3]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                ;
-+-----------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                             ; Pad To Core Index ; Setting ;
-+-----------------------------------------------------------------+-------------------+---------+
-; SD_DAT[1]                                                       ;                   ;         ;
-; SD_DAT[2]                                                       ;                   ;         ;
-; SD_DAT[0]                                                       ;                   ;         ;
-;      - sd_interface:sd_int|init_block:init|recv_data~0          ; 0                 ; 6       ;
-; SD_DAT[3]                                                       ;                   ;         ;
-; KEY[2]                                                          ;                   ;         ;
-;      - sd_interface:sd_int|init_block:init|response[0]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[1]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[2]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[3]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[4]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[5]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[6]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[7]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[8]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[9]          ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[10]         ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[11]         ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[12]         ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[13]         ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[14]         ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|response[15]         ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|test_out             ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|activator            ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|state.SEND_CMD0      ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|state.SEND_CMD8      ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|state.END            ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[11]    ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[10]    ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[9]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[8]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[15]    ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[14]    ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[13]    ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[12]    ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[1]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[0]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[3]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[2]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[4]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[6]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[5]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|clock_counter[7]     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|state.READ_CMD0_RESP ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|state.READ_CMD8_RESP ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|gate_signal~8                     ; 0                 ; 6       ;
-;      - sd_interface:sd_int|init_block:init|state.000            ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[15]~20               ; 0                 ; 6       ;
-; CLOCK_50                                                        ;                   ;         ;
-; KEY[3]                                                          ;                   ;         ;
-;      - sd_controller:sd_contr|edge_counter[1]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[2]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[3]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[4]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[5]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[6]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[7]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[8]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[9]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[10]                  ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[11]                  ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[12]                  ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[13]                  ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[14]                  ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[15]                  ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[0]                   ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|gate_signal~2                     ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|gate_signal~5                     ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|gate_signal~6                     ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|gate_signal~7                     ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|gate_signal~8                     ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|gate_signal~9                     ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|state                             ; 0                 ; 6       ;
-;      - sd_controller:sd_contr|edge_counter[15]~20               ; 0                 ; 6       ;
-+-----------------------------------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                       ;
++--------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                    ; Pad To Core Index ; Setting ;
++--------------------------------------------------------+-------------------+---------+
+; SD_DAT[1]                                              ;                   ;         ;
+; SD_DAT[2]                                              ;                   ;         ;
+; SD_DAT[0]                                              ;                   ;         ;
+;      - sd_interface:sd_int|init_block:init|recv_data~0 ; 0                 ; 6       ;
+; SD_DAT[3]                                              ;                   ;         ;
+; CLOCK_50                                               ;                   ;         ;
+; KEY[3]                                                 ;                   ;         ;
+;      - sd_controller:sd_contr|gate_signal~0            ; 1                 ; 6       ;
+;      - sd_controller:sd_contr|edge_counter[15]~33      ; 1                 ; 6       ;
+;      - sd_controller:sd_contr|edge_counter[0]~46       ; 1                 ; 6       ;
+;      - sd_controller:sd_contr|state~0                  ; 1                 ; 6       ;
++--------------------------------------------------------+-------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1881,411 +1816,436 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                           ; PIN_Y2             ; 3       ; Clock                                 ; no     ; --                   ; --               ; --                        ;
 ; CLOCK_50                                           ; PIN_Y2             ; 19      ; Clock                                 ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; KEY[2]                                             ; PIN_N21            ; 42      ; Async. clear, Clock enable            ; no     ; --                   ; --               ; --                        ;
-; KEY[3]                                             ; PIN_R24            ; 24      ; Clock enable, Sync. load              ; no     ; --                   ; --               ; --                        ;
-; andgate                                            ; LCCOMB_X66_Y38_N30 ; 17      ; Clock                                 ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; clock_divisor:clk_div|clk_250k                     ; FF_X59_Y37_N13     ; 106     ; Clock                                 ; yes    ; Global Clock         ; GCLK17           ; --                        ;
-; sd_controller:sd_contr|edge_counter[15]~20         ; LCCOMB_X66_Y38_N28 ; 16      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; sd_interface:sd_int|init_block:init|LessThan0~2    ; LCCOMB_X59_Y38_N28 ; 18      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; sd_interface:sd_int|init_block:init|MOSI[46]~0     ; LCCOMB_X62_Y38_N28 ; 11      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; sd_interface:sd_int|init_block:init|activator      ; FF_X62_Y38_N29     ; 57      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; sd_interface:sd_int|init_block:init|recv_data[6]~1 ; LCCOMB_X62_Y38_N16 ; 16      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; sd_interface:sd_int|init_block:init|state.END      ; FF_X56_Y38_N15     ; 6       ; Latch enable                          ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; andgate                                            ; LCCOMB_X76_Y69_N0  ; 17      ; Clock                                 ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; clock_divisor:clk_div|clk_250k                     ; FF_X43_Y31_N9      ; 109     ; Clock                                 ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; sd_controller:sd_contr|edge_counter[15]~33         ; LCCOMB_X76_Y69_N6  ; 15      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; sd_interface:sd_int|init_block:init|LessThan0~2    ; LCCOMB_X72_Y70_N30 ; 17      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; sd_interface:sd_int|init_block:init|MOSI[46]~0     ; LCCOMB_X74_Y69_N12 ; 17      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; sd_interface:sd_int|init_block:init|activator      ; FF_X74_Y69_N13     ; 51      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; sd_interface:sd_int|init_block:init|recv_data[1]~2 ; LCCOMB_X73_Y70_N18 ; 16      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; sd_interface:sd_int|init_block:init|state.END      ; FF_X60_Y69_N3      ; 10      ; Latch enable                          ; yes    ; Global Clock         ; GCLK11           ; --                        ;
 +----------------------------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                               ;
-+-----------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                          ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50                                      ; PIN_Y2             ; 19      ; 3                                    ; Global Clock         ; GCLK4            ; --                        ;
-; andgate                                       ; LCCOMB_X66_Y38_N30 ; 17      ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
-; clock_divisor:clk_div|clk_250k                ; FF_X59_Y37_N13     ; 106     ; 1                                    ; Global Clock         ; GCLK17           ; --                        ;
-; sd_interface:sd_int|init_block:init|state.END ; FF_X56_Y38_N15     ; 6       ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
-+-----------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                              ;
++-----------------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                          ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CLOCK_50                                      ; PIN_Y2            ; 19      ; 17                                   ; Global Clock         ; GCLK4            ; --                        ;
+; andgate                                       ; LCCOMB_X76_Y69_N0 ; 17      ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
+; clock_divisor:clk_div|clk_250k                ; FF_X43_Y31_N9     ; 109     ; 8                                    ; Global Clock         ; GCLK17           ; --                        ;
+; sd_interface:sd_int|init_block:init|state.END ; FF_X60_Y69_N3     ; 10      ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
++-----------------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                              ;
-+--------------------------------------------------------------------+---------+
-; Name                                                               ; Fan-Out ;
-+--------------------------------------------------------------------+---------+
-; sd_interface:sd_int|init_block:init|activator                      ; 57      ;
-; KEY[2]~input                                                       ; 42      ;
-; sd_interface:sd_int|init_block:init|state.END                      ; 40      ;
-; sd_interface:sd_int|init_block:init|MOSI_bit~0                     ; 38      ;
-; KEY[3]~input                                                       ; 24      ;
-; sd_interface:sd_int|init_block:init|LessThan0~2                    ; 18      ;
-; sd_controller:sd_contr|edge_counter[15]~20                         ; 16      ;
-; sd_interface:sd_int|init_block:init|recv_data[6]~1                 ; 16      ;
-; ~GND                                                               ; 14      ;
-; sd_interface:sd_int|init_block:init|state.SEND_CMD8                ; 13      ;
-; sd_interface:sd_int|init_block:init|state.SEND_CMD0                ; 13      ;
-; sd_interface:sd_int|init_block:init|MOSI[46]~0                     ; 11      ;
-; sd_interface:sd_int|init_block:init|clock_counter[4]               ; 9       ;
-; sd_interface:sd_int|init_block:init|recv_data~17                   ; 8       ;
-; sd_interface:sd_int|init_block:init|clock_counter[5]               ; 8       ;
-; sd_interface:sd_int|init_block:init|clock_counter[7]               ; 7       ;
-; sd_interface:sd_int|init_block:init|clock_counter[6]               ; 7       ;
-; sd_interface:sd_int|init_block:init|clock_counter[2]               ; 6       ;
-; sd_interface:sd_int|init_block:init|clock_counter[3]               ; 6       ;
-; sd_interface:sd_int|init_block:init|clock_counter[1]               ; 6       ;
-; sd_interface:sd_int|init_block:init|state.READ_CMD8_RESP           ; 5       ;
-; sd_interface:sd_int|init_block:init|state.READ_CMD0_RESP           ; 5       ;
-; sd_interface:sd_int|init_block:init|clock_counter[0]               ; 5       ;
-; sd_interface:sd_int|init_block:init|LessThan1~0                    ; 5       ;
-; clock_divisor:clk_div|Equal0~4                                     ; 5       ;
-; sd_interface:sd_int|init_block:init|state.000                      ; 4       ;
-; sd_interface:sd_int|init_block:init|Equal1~1                       ; 4       ;
-; sd_interface:sd_int|init_block:init|Equal1~0                       ; 4       ;
-; sd_interface:sd_int|init_block:init|response[7]                    ; 3       ;
-; sd_interface:sd_int|init_block:init|response[6]                    ; 3       ;
-; sd_interface:sd_int|init_block:init|response[5]                    ; 3       ;
-; sd_interface:sd_int|init_block:init|response[4]                    ; 3       ;
-; sd_interface:sd_int|init_block:init|response[3]                    ; 3       ;
-; sd_interface:sd_int|init_block:init|response[2]                    ; 3       ;
-; sd_interface:sd_int|init_block:init|response[1]                    ; 3       ;
-; sd_interface:sd_int|init_block:init|response[0]                    ; 3       ;
-; clock_divisor:clk_div|clk_250k                                     ; 3       ;
-; CLOCK_50~input                                                     ; 2       ;
-; sd_interface:sd_int|init_block:init|next_state.000_1289            ; 2       ;
-; sd_interface:sd_int|init_block:init|next_state.READ_CMD8_RESP_1257 ; 2       ;
-; sd_interface:sd_int|init_block:init|next_state.READ_CMD0_RESP_1273 ; 2       ;
-; sd_interface:sd_int|init_block:init|next_state.END_1249            ; 2       ;
-; sd_interface:sd_int|init_block:init|next_state.SEND_CMD8_1265      ; 2       ;
-; sd_interface:sd_int|init_block:init|next_state.SEND_CMD0_1281      ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[0]                        ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[3]                        ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[5]                        ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[6]                        ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[8]                        ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[10]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[12]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[14]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[17]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[18]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[19]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[20]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[21]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[22]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[23]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[24]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[25]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[26]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[27]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[28]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[29]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[30]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[31]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[32]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[33]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[34]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[35]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[36]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[37]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[38]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[39]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[40]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[41]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[42]                       ; 2       ;
-; sd_controller:sd_contr|edge_detect:edged|out_bits[0]               ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[44]                       ; 2       ;
-; sd_interface:sd_int|init_block:init|always1~8                      ; 2       ;
-; sd_interface:sd_int|init_block:init|always1~6                      ; 2       ;
-; sd_interface:sd_int|init_block:init|always1~3                      ; 2       ;
-; sd_interface:sd_int|init_block:init|always1~2                      ; 2       ;
-; sd_interface:sd_int|init_block:init|always1~1                      ; 2       ;
-; sd_interface:sd_int|init_block:init|always1~0                      ; 2       ;
-; sd_interface:sd_int|init_block:init|Equal1~3                       ; 2       ;
-; sd_interface:sd_int|init_block:init|Equal1~2                       ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[45]                       ; 2       ;
-; sd_controller:sd_contr|gate_signal                                 ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[14]                  ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[13]                  ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[12]                  ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[11]                  ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[10]                  ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[9]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[8]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[7]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[6]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[5]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[4]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[3]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[2]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[1]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[12]              ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[13]              ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[14]              ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[15]              ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[8]               ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[9]               ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[10]              ; 2       ;
-; sd_interface:sd_int|init_block:init|clock_counter[11]              ; 2       ;
-; sd_interface:sd_int|init_block:init|recv_data[0]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI[47]                       ; 2       ;
-; clock_divisor:clk_div|count_update[15]                             ; 2       ;
-; clock_divisor:clk_div|count_update[14]                             ; 2       ;
-; clock_divisor:clk_div|count_update[13]                             ; 2       ;
-; clock_divisor:clk_div|count_update[12]                             ; 2       ;
-; clock_divisor:clk_div|count_update[11]                             ; 2       ;
-; clock_divisor:clk_div|count_update[10]                             ; 2       ;
-; clock_divisor:clk_div|count_update[9]                              ; 2       ;
-; clock_divisor:clk_div|count_update[8]                              ; 2       ;
-; clock_divisor:clk_div|count_update[5]                              ; 2       ;
-; clock_divisor:clk_div|count_update[4]                              ; 2       ;
-; clock_divisor:clk_div|count_update[7]                              ; 2       ;
-; clock_divisor:clk_div|count_update[6]                              ; 2       ;
-; clock_divisor:clk_div|count_update[2]                              ; 2       ;
-; clock_divisor:clk_div|count_update[1]                              ; 2       ;
-; clock_divisor:clk_div|count_update[0]                              ; 2       ;
-; clock_divisor:clk_div|count_update[3]                              ; 2       ;
-; sd_interface:sd_int|init_block:init|test_out                       ; 2       ;
-; sd_interface:sd_int|init_block:init|response[11]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|response[10]                   ; 2       ;
-; sd_interface:sd_int|init_block:init|response[9]                    ; 2       ;
-; sd_interface:sd_int|init_block:init|response[8]                    ; 2       ;
-; sd_controller:sd_contr|edge_counter[15]                            ; 2       ;
-; sd_controller:sd_contr|edge_counter[14]                            ; 2       ;
-; sd_controller:sd_contr|edge_counter[13]                            ; 2       ;
-; sd_controller:sd_contr|edge_counter[12]                            ; 2       ;
-; sd_controller:sd_contr|edge_counter[11]                            ; 2       ;
-; sd_controller:sd_contr|edge_counter[10]                            ; 2       ;
-; sd_controller:sd_contr|edge_counter[9]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[8]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[7]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[6]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[5]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[4]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[3]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[2]                             ; 2       ;
-; sd_controller:sd_contr|edge_counter[1]                             ; 2       ;
-; sd_interface:sd_int|init_block:init|CS_bit                         ; 2       ;
-; sd_interface:sd_int|init_block:init|MOSI_bit                       ; 2       ;
-; SD_DAT[0]~input                                                    ; 1       ;
-; sd_interface:sd_int|init_block:init|state.000~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|clock_counter[6]~2             ; 1       ;
-; sd_interface:sd_int|init_block:init|clock_counter[4]~1             ; 1       ;
-; sd_interface:sd_int|init_block:init|clock_counter[0]~0             ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector48~4                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector45~4                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector40~4                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector38~4                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector36~4                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector34~4                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector33~4                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector6~4                    ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector49~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector47~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[1]                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector46~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[2]                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector44~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[4]                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector43~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector42~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector41~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[7]                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector39~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[9]                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector37~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[11]                       ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector35~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[13]                       ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[15]                       ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector32~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[16]                       ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector31~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector30~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector29~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector28~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector27~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector26~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector25~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector24~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector23~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector22~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector21~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector20~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector19~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector18~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector17~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector16~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector15~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector14~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector13~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector12~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector11~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector10~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector9~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector8~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector7~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector60~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector5~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[43]                       ; 1       ;
-; sd_controller:sd_contr|Equal1~0                                    ; 1       ;
-; sd_controller:sd_contr|edge_detect:edged|out_bits[1]               ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector52~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector56~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector4~0                    ; 1       ;
-; sd_controller:sd_contr|state                                       ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector0~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector50~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|LessThan6~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|always1~7                      ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector54~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|always1~5                      ; 1       ;
-; sd_interface:sd_int|init_block:init|always1~4                      ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector58~0                   ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector3~0                    ; 1       ;
-; sd_controller:sd_contr|gate_signal~11                              ; 1       ;
-; sd_controller:sd_contr|gate_signal~10                              ; 1       ;
-; sd_controller:sd_contr|gate_signal~9                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~8                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~7                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~6                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~5                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~4                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~3                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~2                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~1                               ; 1       ;
-; sd_controller:sd_contr|gate_signal~0                               ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~16                   ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~15                   ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~14                   ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~13                   ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~12                   ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~11                   ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~10                   ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~9                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~8                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~7                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~6                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~5                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~4                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~3                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~2                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector2~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|MOSI[46]                       ; 1       ;
-; clock_divisor:clk_div|count_update~3                               ; 1       ;
-; clock_divisor:clk_div|count_update~2                               ; 1       ;
-; clock_divisor:clk_div|count_update~1                               ; 1       ;
-; clock_divisor:clk_div|count_update~0                               ; 1       ;
-; sd_interface:sd_int|init_block:init|test_out~3                     ; 1       ;
-; sd_interface:sd_int|init_block:init|test_out~2                     ; 1       ;
-; sd_interface:sd_int|init_block:init|test_out~1                     ; 1       ;
-; sd_interface:sd_int|init_block:init|test_out~0                     ; 1       ;
-; sd_interface:sd_int|init_block:init|LessThan1~3                    ; 1       ;
-; sd_interface:sd_int|init_block:init|LessThan1~2                    ; 1       ;
-; sd_interface:sd_int|init_block:init|LessThan1~1                    ; 1       ;
-; sd_interface:sd_int|init_block:init|recv_data[15]                  ; 1       ;
-; sd_interface:sd_int|init_block:init|LessThan0~1                    ; 1       ;
-; sd_interface:sd_int|init_block:init|LessThan0~0                    ; 1       ;
-; sd_interface:sd_int|init_block:init|Selector1~0                    ; 1       ;
-; clock_divisor:clk_div|clk_250k~0                                   ; 1       ;
-; clock_divisor:clk_div|Equal0~3                                     ; 1       ;
-; clock_divisor:clk_div|Equal0~2                                     ; 1       ;
-; clock_divisor:clk_div|Equal0~1                                     ; 1       ;
-; clock_divisor:clk_div|Equal0~0                                     ; 1       ;
-; sd_interface:sd_int|init_block:init|response[15]                   ; 1       ;
-; sd_interface:sd_int|init_block:init|response[14]                   ; 1       ;
-; sd_interface:sd_int|init_block:init|response[13]                   ; 1       ;
-; sd_interface:sd_int|init_block:init|response[12]                   ; 1       ;
-; sd_controller:sd_contr|edge_counter[15]~47                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[14]~46                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[14]~45                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[13]~44                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[13]~43                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[12]~42                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[12]~41                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[11]~40                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[11]~39                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[10]~38                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[10]~37                         ; 1       ;
-; sd_controller:sd_contr|edge_counter[9]~36                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[9]~35                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[8]~34                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[8]~33                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[7]~32                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[7]~31                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[6]~30                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[6]~29                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[5]~28                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[5]~27                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[4]~26                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[4]~25                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[3]~24                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[3]~23                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[2]~22                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[2]~21                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[1]~19                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[1]~18                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[0]~17                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[0]~16                          ; 1       ;
-; sd_controller:sd_contr|edge_counter[0]                             ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~28                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~27                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~26                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~25                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~24                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~23                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~22                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~21                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~20                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~19                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~18                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~17                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~16                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~15                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~14                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~13                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~12                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~11                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~10                        ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~9                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~8                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~7                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~6                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~5                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~4                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~3                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~2                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~1                         ; 1       ;
-; sd_interface:sd_int|init_block:init|Add0~0                         ; 1       ;
-; clock_divisor:clk_div|Add0~30                                      ; 1       ;
-; clock_divisor:clk_div|Add0~29                                      ; 1       ;
-; clock_divisor:clk_div|Add0~28                                      ; 1       ;
-; clock_divisor:clk_div|Add0~27                                      ; 1       ;
-; clock_divisor:clk_div|Add0~26                                      ; 1       ;
-; clock_divisor:clk_div|Add0~25                                      ; 1       ;
-; clock_divisor:clk_div|Add0~24                                      ; 1       ;
-; clock_divisor:clk_div|Add0~23                                      ; 1       ;
-; clock_divisor:clk_div|Add0~22                                      ; 1       ;
-; clock_divisor:clk_div|Add0~21                                      ; 1       ;
-; clock_divisor:clk_div|Add0~20                                      ; 1       ;
-; clock_divisor:clk_div|Add0~19                                      ; 1       ;
-; clock_divisor:clk_div|Add0~18                                      ; 1       ;
-; clock_divisor:clk_div|Add0~17                                      ; 1       ;
-; clock_divisor:clk_div|Add0~16                                      ; 1       ;
-; clock_divisor:clk_div|Add0~15                                      ; 1       ;
-; clock_divisor:clk_div|Add0~14                                      ; 1       ;
-; clock_divisor:clk_div|Add0~13                                      ; 1       ;
-; clock_divisor:clk_div|Add0~12                                      ; 1       ;
-; clock_divisor:clk_div|Add0~11                                      ; 1       ;
-; clock_divisor:clk_div|Add0~10                                      ; 1       ;
-; clock_divisor:clk_div|Add0~9                                       ; 1       ;
-; clock_divisor:clk_div|Add0~8                                       ; 1       ;
-; clock_divisor:clk_div|Add0~7                                       ; 1       ;
-; clock_divisor:clk_div|Add0~6                                       ; 1       ;
-; clock_divisor:clk_div|Add0~5                                       ; 1       ;
-; clock_divisor:clk_div|Add0~4                                       ; 1       ;
-; clock_divisor:clk_div|Add0~3                                       ; 1       ;
-; clock_divisor:clk_div|Add0~2                                       ; 1       ;
-; clock_divisor:clk_div|Add0~1                                       ; 1       ;
-; clock_divisor:clk_div|Add0~0                                       ; 1       ;
-+--------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                ;
++----------------------------------------------------------------------+---------+
+; Name                                                                 ; Fan-Out ;
++----------------------------------------------------------------------+---------+
+; sd_interface:sd_int|init_block:init|activator                        ; 51      ;
+; sd_interface:sd_int|init_block:init|WideOr11~0                       ; 48      ;
+; sd_interface:sd_int|init_block:init|state.END                        ; 34      ;
+; sd_interface:sd_int|init_block:init|MOSI[46]~0                       ; 17      ;
+; sd_interface:sd_int|init_block:init|LessThan0~2                      ; 17      ;
+; sd_interface:sd_int|init_block:init|recv_data[1]~2                   ; 16      ;
+; sd_controller:sd_contr|edge_counter[15]~33                           ; 15      ;
+; sd_interface:sd_int|init_block:init|clock_counter[4]                 ; 15      ;
+; sd_interface:sd_int|init_block:init|clock_counter[5]                 ; 12      ;
+; sd_interface:sd_int|init_block:init|clock_counter[6]                 ; 11      ;
+; sd_interface:sd_int|init_block:init|state.READ_CMD0_RESP             ; 10      ;
+; sd_interface:sd_int|init_block:init|clock_counter[7]                 ; 10      ;
+; sd_interface:sd_int|init_block:init|clock_counter[3]                 ; 9       ;
+; sd_interface:sd_int|init_block:init|clock_counter[2]                 ; 9       ;
+; sd_interface:sd_int|init_block:init|state.READ_ACMD41_RESP           ; 8       ;
+; sd_interface:sd_int|init_block:init|clock_counter[8]                 ; 8       ;
+; sd_interface:sd_int|init_block:init|always0~1                        ; 7       ;
+; sd_interface:sd_int|init_block:init|state.READ_CMD8_RESP             ; 7       ;
+; sd_interface:sd_int|init_block:init|clock_counter[1]                 ; 7       ;
+; sd_interface:sd_int|init_block:init|Equal2~2                         ; 6       ;
+; sd_interface:sd_int|init_block:init|state.READ_CMD55_RESP            ; 6       ;
+; sd_interface:sd_int|init_block:init|Equal1~1                         ; 6       ;
+; sd_interface:sd_int|init_block:init|WideOr16~0                       ; 5       ;
+; clock_divisor:clk_div|Equal0~4                                       ; 5       ;
+; KEY[3]~input                                                         ; 4       ;
+; sd_interface:sd_int|init_block:init|always1~7                        ; 4       ;
+; sd_interface:sd_int|init_block:init|state.0000                       ; 4       ;
+; sd_interface:sd_int|init_block:init|Equal1~3                         ; 4       ;
+; sd_interface:sd_int|init_block:init|always0~3                        ; 4       ;
+; sd_interface:sd_int|init_block:init|clock_counter[0]                 ; 4       ;
+; sd_controller:sd_contr|state                                         ; 3       ;
+; sd_interface:sd_int|init_block:init|LessThan9~0                      ; 3       ;
+; sd_interface:sd_int|init_block:init|always1~12                       ; 3       ;
+; sd_interface:sd_int|init_block:init|Equal1~2                         ; 3       ;
+; sd_controller:sd_contr|edge_counter[0]                               ; 3       ;
+; sd_interface:sd_int|init_block:init|recv_data[1]~1                   ; 3       ;
+; sd_interface:sd_int|init_block:init|clock_counter[15]                ; 3       ;
+; sd_interface:sd_int|init_block:init|clock_counter[14]                ; 3       ;
+; sd_interface:sd_int|init_block:init|clock_counter[13]                ; 3       ;
+; sd_interface:sd_int|init_block:init|state.SEND_CMD41                 ; 3       ;
+; sd_interface:sd_int|init_block:init|state.SEND_CMD55                 ; 3       ;
+; sd_interface:sd_int|init_block:init|state.SEND_CMD8                  ; 3       ;
+; sd_interface:sd_int|init_block:init|state.SEND_CMD0                  ; 3       ;
+; clock_divisor:clk_div|clk_250k                                       ; 3       ;
+; sd_controller:sd_contr|edge_counter[4]                               ; 3       ;
+; CLOCK_50~input                                                       ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.0000_1359             ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.READ_ACMD41_RESP_1295 ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD8_RESP_1327   ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD55_RESP_1311  ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD0_RESP_1343   ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.END_1287              ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD41_1303       ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD55_1319       ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD8_1335        ; 2       ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD0_1351        ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[0]                          ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[1]                          ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[8]                          ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[10]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[12]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[14]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[17]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[18]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[19]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[20]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[21]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[22]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[23]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[24]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[25]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[26]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[27]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[28]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[29]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[30]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[31]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[32]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[33]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[34]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[35]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[36]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[37]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[38]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[39]                         ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[43]                         ; 2       ;
+; sd_controller:sd_contr|edge_detect:edged|out_bits[0]                 ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~22                       ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~20                       ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~18                       ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~16                       ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~13                       ; 2       ;
+; sd_interface:sd_int|init_block:init|LessThan15~0                     ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~11                       ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~8                        ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~5                        ; 2       ;
+; sd_interface:sd_int|init_block:init|always1~4                        ; 2       ;
+; sd_interface:sd_int|init_block:init|Equal1~4                         ; 2       ;
+; sd_controller:sd_contr|always0~1                                     ; 2       ;
+; sd_interface:sd_int|init_block:init|Equal2~1                         ; 2       ;
+; sd_interface:sd_int|init_block:init|Equal2~0                         ; 2       ;
+; sd_interface:sd_int|init_block:init|always0~2                        ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[14]                    ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[13]                    ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[12]                    ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[11]                    ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[10]                    ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[9]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[8]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[7]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[6]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[5]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[4]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[3]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[2]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[1]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|always0~0                        ; 2       ;
+; sd_interface:sd_int|init_block:init|Equal1~0                         ; 2       ;
+; sd_interface:sd_int|init_block:init|clock_counter[12]                ; 2       ;
+; sd_interface:sd_int|init_block:init|clock_counter[11]                ; 2       ;
+; sd_interface:sd_int|init_block:init|clock_counter[10]                ; 2       ;
+; sd_interface:sd_int|init_block:init|clock_counter[9]                 ; 2       ;
+; sd_interface:sd_int|init_block:init|recv_data[0]                     ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI[47]                         ; 2       ;
+; clock_divisor:clk_div|count_update[15]                               ; 2       ;
+; clock_divisor:clk_div|count_update[14]                               ; 2       ;
+; clock_divisor:clk_div|count_update[13]                               ; 2       ;
+; clock_divisor:clk_div|count_update[12]                               ; 2       ;
+; clock_divisor:clk_div|count_update[11]                               ; 2       ;
+; clock_divisor:clk_div|count_update[10]                               ; 2       ;
+; clock_divisor:clk_div|count_update[9]                                ; 2       ;
+; clock_divisor:clk_div|count_update[8]                                ; 2       ;
+; clock_divisor:clk_div|count_update[5]                                ; 2       ;
+; clock_divisor:clk_div|count_update[4]                                ; 2       ;
+; clock_divisor:clk_div|count_update[7]                                ; 2       ;
+; clock_divisor:clk_div|count_update[6]                                ; 2       ;
+; clock_divisor:clk_div|count_update[2]                                ; 2       ;
+; clock_divisor:clk_div|count_update[1]                                ; 2       ;
+; clock_divisor:clk_div|count_update[0]                                ; 2       ;
+; clock_divisor:clk_div|count_update[3]                                ; 2       ;
+; sd_interface:sd_int|init_block:init|response[7]                      ; 2       ;
+; sd_interface:sd_int|init_block:init|response[6]                      ; 2       ;
+; sd_interface:sd_int|init_block:init|response[5]                      ; 2       ;
+; sd_interface:sd_int|init_block:init|response[4]                      ; 2       ;
+; sd_interface:sd_int|init_block:init|response[3]                      ; 2       ;
+; sd_interface:sd_int|init_block:init|response[2]                      ; 2       ;
+; sd_interface:sd_int|init_block:init|response[1]                      ; 2       ;
+; sd_interface:sd_int|init_block:init|response[0]                      ; 2       ;
+; sd_controller:sd_contr|edge_counter[8]                               ; 2       ;
+; sd_controller:sd_contr|edge_counter[7]                               ; 2       ;
+; sd_controller:sd_contr|edge_counter[6]                               ; 2       ;
+; sd_controller:sd_contr|edge_counter[5]                               ; 2       ;
+; sd_controller:sd_contr|edge_counter[3]                               ; 2       ;
+; sd_controller:sd_contr|edge_counter[2]                               ; 2       ;
+; sd_controller:sd_contr|edge_counter[1]                               ; 2       ;
+; sd_controller:sd_contr|edge_counter[15]                              ; 2       ;
+; sd_controller:sd_contr|edge_counter[14]                              ; 2       ;
+; sd_controller:sd_contr|edge_counter[13]                              ; 2       ;
+; sd_controller:sd_contr|edge_counter[12]                              ; 2       ;
+; sd_controller:sd_contr|edge_counter[11]                              ; 2       ;
+; sd_controller:sd_contr|edge_counter[10]                              ; 2       ;
+; sd_controller:sd_contr|edge_counter[9]                               ; 2       ;
+; sd_interface:sd_int|init_block:init|CS_bit                           ; 2       ;
+; sd_interface:sd_int|init_block:init|MOSI_bit                         ; 2       ;
+; SD_DAT[0]~input                                                      ; 1       ;
+; sd_interface:sd_int|init_block:init|state.0000~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~23                       ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector49~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector48~1                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector48~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector47~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector46~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[2]                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector45~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[3]                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector44~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[4]                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector43~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[5]                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector42~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[6]                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector41~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[7]                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector40~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector39~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[9]                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector38~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector37~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[11]                         ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector36~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector35~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[13]                         ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector34~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector33~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[15]                         ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector32~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[16]                         ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector31~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector30~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector29~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector28~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector27~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector26~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector25~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector24~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector23~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector22~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector21~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector20~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector19~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector18~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector17~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector16~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector15~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector14~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector13~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector12~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector11~1                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector11~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector10~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector9~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector8~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[40]                         ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector7~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[41]                         ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector6~1                      ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[42]                         ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector6~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector68~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector5~0                      ; 1       ;
+; sd_controller:sd_contr|state~0                                       ; 1       ;
+; sd_controller:sd_contr|edge_detect:edged|out_bits[1]                 ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector52~1                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector52~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector60~1                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector60~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector56~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector64~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector4~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[44]                         ; 1       ;
+; sd_controller:sd_contr|edge_counter[0]~46                            ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector0~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector50~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector54~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~21                       ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~19                       ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector58~2                     ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~17                       ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~15                       ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~14                       ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector58~1                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector58~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector62~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~10                       ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~9                        ; 1       ;
+; sd_interface:sd_int|init_block:init|always1~6                        ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector66~1                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector66~0                     ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector3~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[45]                         ; 1       ;
+; sd_controller:sd_contr|gate_signal~0                                 ; 1       ;
+; sd_controller:sd_contr|always0~5                                     ; 1       ;
+; sd_controller:sd_contr|always0~4                                     ; 1       ;
+; sd_controller:sd_contr|always0~3                                     ; 1       ;
+; sd_controller:sd_contr|always0~2                                     ; 1       ;
+; sd_controller:sd_contr|always0~0                                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~17                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~16                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~15                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~14                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~13                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~12                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~11                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~10                     ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~9                      ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~8                      ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~7                      ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~6                      ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~5                      ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~4                      ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~3                      ; 1       ;
+; sd_interface:sd_int|init_block:init|clock_counter~3                  ; 1       ;
+; sd_interface:sd_int|init_block:init|clock_counter~2                  ; 1       ;
+; sd_interface:sd_int|init_block:init|clock_counter~1                  ; 1       ;
+; sd_interface:sd_int|init_block:init|clock_counter~0                  ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector2~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|MOSI[46]                         ; 1       ;
+; sd_controller:sd_contr|gate_signal                                   ; 1       ;
+; clock_divisor:clk_div|count_update~3                                 ; 1       ;
+; clock_divisor:clk_div|count_update~2                                 ; 1       ;
+; clock_divisor:clk_div|count_update~1                                 ; 1       ;
+; clock_divisor:clk_div|count_update~0                                 ; 1       ;
+; sd_interface:sd_int|init_block:init|recv_data[15]                    ; 1       ;
+; sd_interface:sd_int|init_block:init|LessThan0~1                      ; 1       ;
+; sd_interface:sd_int|init_block:init|LessThan0~0                      ; 1       ;
+; sd_interface:sd_int|init_block:init|Selector1~0                      ; 1       ;
+; clock_divisor:clk_div|clk_250k~0                                     ; 1       ;
+; clock_divisor:clk_div|Equal0~3                                       ; 1       ;
+; clock_divisor:clk_div|Equal0~2                                       ; 1       ;
+; clock_divisor:clk_div|Equal0~1                                       ; 1       ;
+; clock_divisor:clk_div|Equal0~0                                       ; 1       ;
+; sd_interface:sd_int|init_block:init|response[15]                     ; 1       ;
+; sd_interface:sd_int|init_block:init|response[14]                     ; 1       ;
+; sd_interface:sd_int|init_block:init|response[13]                     ; 1       ;
+; sd_interface:sd_int|init_block:init|response[12]                     ; 1       ;
+; sd_interface:sd_int|init_block:init|response[11]                     ; 1       ;
+; sd_interface:sd_int|init_block:init|response[10]                     ; 1       ;
+; sd_interface:sd_int|init_block:init|response[9]                      ; 1       ;
+; sd_interface:sd_int|init_block:init|response[8]                      ; 1       ;
+; sd_controller:sd_contr|edge_counter[15]~44                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[14]~43                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[14]~42                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[13]~41                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[13]~40                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[12]~39                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[12]~38                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[11]~37                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[11]~36                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[10]~35                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[10]~34                           ; 1       ;
+; sd_controller:sd_contr|edge_counter[9]~32                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[9]~31                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[8]~30                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[8]~29                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[7]~28                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[7]~27                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[6]~26                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[6]~25                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[5]~24                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[5]~23                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[4]~22                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[4]~21                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[3]~20                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[3]~19                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[2]~18                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[2]~17                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[1]~16                            ; 1       ;
+; sd_controller:sd_contr|edge_counter[1]~15                            ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~30                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~29                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~28                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~27                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~26                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~25                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~24                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~23                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~22                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~21                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~20                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~19                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~18                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~17                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~16                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~15                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~14                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~13                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~12                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~11                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~10                          ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~9                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~8                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~7                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~6                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~5                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~4                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~3                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~2                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~1                           ; 1       ;
+; sd_interface:sd_int|init_block:init|Add0~0                           ; 1       ;
+; clock_divisor:clk_div|Add0~30                                        ; 1       ;
+; clock_divisor:clk_div|Add0~29                                        ; 1       ;
+; clock_divisor:clk_div|Add0~28                                        ; 1       ;
+; clock_divisor:clk_div|Add0~27                                        ; 1       ;
+; clock_divisor:clk_div|Add0~26                                        ; 1       ;
+; clock_divisor:clk_div|Add0~25                                        ; 1       ;
+; clock_divisor:clk_div|Add0~24                                        ; 1       ;
+; clock_divisor:clk_div|Add0~23                                        ; 1       ;
+; clock_divisor:clk_div|Add0~22                                        ; 1       ;
+; clock_divisor:clk_div|Add0~21                                        ; 1       ;
+; clock_divisor:clk_div|Add0~20                                        ; 1       ;
+; clock_divisor:clk_div|Add0~19                                        ; 1       ;
+; clock_divisor:clk_div|Add0~18                                        ; 1       ;
+; clock_divisor:clk_div|Add0~17                                        ; 1       ;
+; clock_divisor:clk_div|Add0~16                                        ; 1       ;
+; clock_divisor:clk_div|Add0~15                                        ; 1       ;
+; clock_divisor:clk_div|Add0~14                                        ; 1       ;
+; clock_divisor:clk_div|Add0~13                                        ; 1       ;
+; clock_divisor:clk_div|Add0~12                                        ; 1       ;
+; clock_divisor:clk_div|Add0~11                                        ; 1       ;
+; clock_divisor:clk_div|Add0~10                                        ; 1       ;
+; clock_divisor:clk_div|Add0~9                                         ; 1       ;
+; clock_divisor:clk_div|Add0~8                                         ; 1       ;
+; clock_divisor:clk_div|Add0~7                                         ; 1       ;
+; clock_divisor:clk_div|Add0~6                                         ; 1       ;
+; clock_divisor:clk_div|Add0~5                                         ; 1       ;
+; clock_divisor:clk_div|Add0~4                                         ; 1       ;
+; clock_divisor:clk_div|Add0~3                                         ; 1       ;
+; clock_divisor:clk_div|Add0~2                                         ; 1       ;
+; clock_divisor:clk_div|Add0~1                                         ; 1       ;
+; clock_divisor:clk_div|Add0~0                                         ; 1       ;
++----------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------+
@@ -2293,51 +2253,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 229 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 50 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 101 / 209,544 ( < 1 % ) ;
-; Direct links          ; 80 / 342,891 ( < 1 % )  ;
+; Block interconnects   ; 302 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 26 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 105 / 209,544 ( < 1 % ) ;
+; Direct links          ; 92 / 342,891 ( < 1 % )  ;
 ; Global clocks         ; 4 / 20 ( 20 % )         ;
-; Local interconnects   ; 134 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 27 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 159 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 145 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 24 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 209 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.13) ; Number of LABs  (Total = 16) ;
+; Number of Logic Elements  (Average = 12.11) ; Number of LABs  (Total = 19) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 1                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
+; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 0                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 2                            ;
 ; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 0                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 10                           ;
+; 16                                          ; 11                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.88) ; Number of LABs  (Total = 16) ;
+; LAB-wide Signals  (Average = 1.26) ; Number of LABs  (Total = 19) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 5                            ;
-; 1 Clock                            ; 14                           ;
-; 1 Clock enable                     ; 8                            ;
+; 1 Clock                            ; 16                           ;
+; 1 Clock enable                     ; 4                            ;
 ; 1 Sync. load                       ; 1                            ;
-; 2 Clock enables                    ; 1                            ;
+; 2 Clock enables                    ; 2                            ;
 ; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -2345,97 +2304,100 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 21.06) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced  (Average = 19.79) ; Number of LABs  (Total = 19) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
+; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
+; 22                                           ; 3                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 1                            ;
-; 30                                           ; 2                            ;
+; 30                                           ; 0                            ;
 ; 31                                           ; 1                            ;
-; 32                                           ; 3                            ;
+; 32                                           ; 4                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.94) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced Out  (Average = 8.89) ; Number of LABs  (Total = 19) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 2                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 1                            ;
 ; 3                                               ; 2                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 0                            ;
 ; 10                                              ; 0                            ;
 ; 11                                              ; 0                            ;
 ; 12                                              ; 1                            ;
 ; 13                                              ; 1                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 1                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 3                            ;
 ; 16                                              ; 1                            ;
-; 17                                              ; 2                            ;
+; 17                                              ; 1                            ;
+; 18                                              ; 0                            ;
+; 19                                              ; 0                            ;
+; 20                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.06) ; Number of LABs  (Total = 16) ;
+; Number of Distinct Inputs  (Average = 12.32) ; Number of LABs  (Total = 19) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 4                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 2                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 3                            ;
 ; 15                                           ; 1                            ;
-; 16                                           ; 0                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 1                            ;
 ; 20                                           ; 1                            ;
-; 21                                           ; 0                            ;
+; 21                                           ; 1                            ;
 ; 22                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -2496,9 +2458,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 27        ; 0            ; 27        ; 0            ; 0            ; 27        ; 27        ; 0            ; 27        ; 27        ; 0            ; 0            ; 0            ; 0            ; 7            ; 0            ; 0            ; 7            ; 0            ; 0            ; 3            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 27        ; 0            ; 0            ;
+; Total Pass         ; 24        ; 0            ; 24        ; 0            ; 0            ; 24        ; 24        ; 0            ; 24        ; 24        ; 0            ; 0            ; 0            ; 0            ; 6            ; 0            ; 0            ; 6            ; 0            ; 0            ; 3            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 24        ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 27           ; 0         ; 27           ; 27           ; 0         ; 0         ; 27           ; 0         ; 0         ; 27           ; 27           ; 27           ; 27           ; 20           ; 27           ; 27           ; 20           ; 27           ; 27           ; 24           ; 27           ; 27           ; 27           ; 27           ; 27           ; 27           ; 0         ; 27           ; 27           ;
+; Total Inapplicable ; 0         ; 24           ; 0         ; 24           ; 24           ; 0         ; 0         ; 24           ; 0         ; 0         ; 24           ; 24           ; 24           ; 24           ; 18           ; 24           ; 24           ; 18           ; 24           ; 24           ; 21           ; 24           ; 24           ; 24           ; 24           ; 24           ; 24           ; 0         ; 24           ; 24           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; SD_CLK             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SD_CMD             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2518,13 +2480,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[13]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDR[14]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDR[15]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[16]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[17]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SD_DAT[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SD_DAT[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SD_DAT[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SD_DAT[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; KEY[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
@@ -2567,48 +2526,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                       ;
-+--------------------------------+--------------------------------+-------------------+
-; Source Clock(s)                ; Destination Clock(s)           ; Delay Added in ns ;
-+--------------------------------+--------------------------------+-------------------+
-; clock_divisor:clk_div|clk_250k ; clock_divisor:clk_div|clk_250k ; 133.6             ;
-; CLOCK_50                       ; CLOCK_50                       ; 8.6               ;
-+--------------------------------+--------------------------------+-------------------+
++----------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                      ;
++-----------------------------------------------+--------------------------------+-------------------+
+; Source Clock(s)                               ; Destination Clock(s)           ; Delay Added in ns ;
++-----------------------------------------------+--------------------------------+-------------------+
+; clock_divisor:clk_div|clk_250k                ; clock_divisor:clk_div|clk_250k ; 100.4             ;
+; CLOCK_50                                      ; CLOCK_50                       ; 9.0               ;
+; sd_interface:sd_int|init_block:init|state.END ; clock_divisor:clk_div|clk_250k ; 7.3               ;
++-----------------------------------------------+--------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                               ;
-+--------------------------------------------------------------------+--------------------------------------------------------------------+-------------------+
-; Source Register                                                    ; Destination Register                                               ; Delay Added in ns ;
-+--------------------------------------------------------------------+--------------------------------------------------------------------+-------------------+
-; clock_divisor:clk_div|clk_250k                                     ; clock_divisor:clk_div|clk_250k                                     ; 5.740             ;
-; sd_interface:sd_int|init_block:init|state.END                      ; sd_interface:sd_int|init_block:init|CS_bit                         ; 3.771             ;
-; clock_divisor:clk_div|count_update[14]                             ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[13]                             ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[12]                             ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[11]                             ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[10]                             ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[9]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[8]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[7]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[6]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[5]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[4]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[3]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[2]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[1]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[0]                              ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; clock_divisor:clk_div|count_update[15]                             ; clock_divisor:clk_div|clk_250k                                     ; 0.479             ;
-; sd_interface:sd_int|init_block:init|next_state.000_1289            ; sd_interface:sd_int|init_block:init|state.000                      ; 0.274             ;
-; sd_interface:sd_int|init_block:init|next_state.END_1249            ; sd_interface:sd_int|init_block:init|state.END                      ; 0.202             ;
-; sd_interface:sd_int|init_block:init|activator                      ; sd_interface:sd_int|init_block:init|MOSI[46]                       ; 0.152             ;
-; sd_interface:sd_int|init_block:init|next_state.READ_CMD8_RESP_1257 ; sd_interface:sd_int|init_block:init|next_state.READ_CMD8_RESP_1257 ; 0.086             ;
-; sd_interface:sd_int|init_block:init|next_state.SEND_CMD8_1265      ; sd_interface:sd_int|init_block:init|state.SEND_CMD8                ; 0.086             ;
-+--------------------------------------------------------------------+--------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 23 path(s) that have the largest delay added for hold.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                   ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+-------------------+
+; Source Register                                                      ; Destination Register                                                 ; Delay Added in ns ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+-------------------+
+; clock_divisor:clk_div|clk_250k                                       ; clock_divisor:clk_div|clk_250k                                       ; 6.331             ;
+; sd_interface:sd_int|init_block:init|state.END                        ; sd_interface:sd_int|init_block:init|CS_bit                           ; 3.196             ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD41_1303       ; sd_interface:sd_int|init_block:init|state.SEND_CMD41                 ; 1.307             ;
+; sd_interface:sd_int|init_block:init|next_state.0000_1359             ; sd_interface:sd_int|init_block:init|state.0000                       ; 1.285             ;
+; sd_interface:sd_int|init_block:init|next_state.READ_ACMD41_RESP_1295 ; sd_interface:sd_int|init_block:init|next_state.READ_ACMD41_RESP_1295 ; 0.858             ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD0_1351        ; sd_interface:sd_int|init_block:init|state.SEND_CMD0                  ; 0.838             ;
+; sd_interface:sd_int|init_block:init|activator                        ; sd_interface:sd_int|init_block:init|MOSI[46]                         ; 0.709             ;
+; sd_controller:sd_contr|edge_counter[8]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.657             ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD8_RESP_1327   ; sd_interface:sd_int|init_block:init|state.READ_CMD8_RESP             ; 0.622             ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD55_1319       ; sd_interface:sd_int|init_block:init|state.SEND_CMD55                 ; 0.600             ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD8_1335        ; sd_interface:sd_int|init_block:init|state.SEND_CMD8                  ; 0.597             ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD0_RESP_1343   ; sd_interface:sd_int|init_block:init|state.READ_CMD0_RESP             ; 0.549             ;
+; sd_controller:sd_contr|edge_counter[7]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.448             ;
+; sd_interface:sd_int|init_block:init|MOSI[43]                         ; sd_interface:sd_int|init_block:init|MOSI[43]                         ; 0.429             ;
+; sd_interface:sd_int|init_block:init|state.READ_CMD0_RESP             ; sd_interface:sd_int|init_block:init|MOSI[43]                         ; 0.429             ;
+; sd_interface:sd_int|init_block:init|state.READ_CMD55_RESP            ; sd_interface:sd_int|init_block:init|MOSI[43]                         ; 0.429             ;
+; clock_divisor:clk_div|count_update[14]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[13]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[12]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[11]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[10]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[9]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[8]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[7]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[6]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[5]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[4]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[3]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[2]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[1]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[0]                                ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; clock_divisor:clk_div|count_update[15]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.411             ;
+; sd_interface:sd_int|init_block:init|MOSI[38]                         ; sd_interface:sd_int|init_block:init|MOSI[38]                         ; 0.407             ;
+; sd_controller:sd_contr|edge_counter[14]                              ; clock_divisor:clk_div|clk_250k                                       ; 0.385             ;
+; sd_controller:sd_contr|edge_counter[13]                              ; clock_divisor:clk_div|clk_250k                                       ; 0.371             ;
+; sd_controller:sd_contr|edge_counter[4]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.329             ;
+; sd_controller:sd_contr|edge_counter[2]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.329             ;
+; sd_controller:sd_contr|edge_counter[1]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.329             ;
+; sd_controller:sd_contr|edge_counter[0]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.329             ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD55_RESP_1311  ; sd_interface:sd_int|init_block:init|state.READ_CMD55_RESP            ; 0.321             ;
+; sd_interface:sd_int|init_block:init|next_state.END_1287              ; sd_interface:sd_int|init_block:init|state.END                        ; 0.313             ;
+; sd_controller:sd_contr|edge_counter[3]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.306             ;
+; sd_controller:sd_contr|edge_counter[6]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.265             ;
+; sd_controller:sd_contr|edge_counter[5]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.265             ;
+; sd_controller:sd_contr|edge_counter[12]                              ; clock_divisor:clk_div|clk_250k                                       ; 0.253             ;
+; sd_controller:sd_contr|edge_counter[11]                              ; clock_divisor:clk_div|clk_250k                                       ; 0.253             ;
+; sd_controller:sd_contr|edge_counter[10]                              ; clock_divisor:clk_div|clk_250k                                       ; 0.253             ;
+; sd_controller:sd_contr|edge_counter[9]                               ; clock_divisor:clk_div|clk_250k                                       ; 0.253             ;
+; sd_controller:sd_contr|edge_counter[15]                              ; clock_divisor:clk_div|clk_250k                                       ; 0.253             ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 49 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2637,7 +2623,7 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location N7
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location P28
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Warning (335093): TimeQuest Timing Analyzer is analyzing 6 combinational loops as latches.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 10 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'sd_card.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -2663,12 +2649,12 @@ Info (176353): Automatically promoted node sd_interface:sd_int|init_block:init|s
         Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector2~0
         Info (176357): Destination node sd_interface:sd_int|init_block:init|MOSI[46]~0
         Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector0~0
-        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector4~0
-        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector5~0
-        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector7~0
-        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector8~0
-        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector9~0
+        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector6~0
         Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector10~0
+        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector11~0
+        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector12~0
+        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector13~0
+        Info (176357): Destination node sd_interface:sd_int|init_block:init|Selector14~0
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2849,6 +2835,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "IRDA_TXD" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_BLON" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[1]" is assigned to location or region, but does not exist in design
@@ -2871,6 +2858,8 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LEDG[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[16]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[17]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "OTG_ADDR[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "OTG_ADDR[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "OTG_CS_N" is assigned to location or region, but does not exist in design
@@ -3012,26 +3001,25 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X58_Y37 to location X68_Y48
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X69_Y61 to location X80_Y73
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Warning (169177): 7 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
+Warning (169177): 6 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin SD_DAT[1] uses I/O standard 3.3-V LVTTL at AF13
     Info (169178): Pin SD_DAT[2] uses I/O standard 3.3-V LVTTL at AB14
     Info (169178): Pin SD_DAT[0] uses I/O standard 3.3-V LVTTL at AE14
     Info (169178): Pin SD_DAT[3] uses I/O standard 3.3-V LVTTL at AC14
-    Info (169178): Pin KEY[2] uses I/O standard 3.3-V LVTTL at N21
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2
     Info (169178): Pin KEY[3] uses I/O standard 3.3-V LVTTL at R24
 Warning (169064): Following 4 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
@@ -3040,11 +3028,11 @@ Warning (169064): Following 4 pins have no output enable or a GND or VCC output 
     Info (169065): Pin SD_DAT[0] has a permanently disabled output enable
     Info (169065): Pin SD_DAT[3] has a permanently enabled output enable
 Info (144001): Generated suppressed messages file C:/Users/user/Desktop/SD_CARD/sd_card.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 342 warnings
-    Info: Peak virtual memory: 911 megabytes
-    Info: Processing ended: Thu Sep 03 05:37:03 2015
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 345 warnings
+    Info: Peak virtual memory: 919 megabytes
+    Info: Processing ended: Thu Sep 10 02:42:57 2015
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +----------------------------+

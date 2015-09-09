@@ -2,7 +2,6 @@ module sd_controller(
 	input	CLOCK_50,	//	50 MHz
 	input	sd_clk_in,
 	input start_btn,
-	input resend_btn,
 	input[15:0] response_signal,
 	output reg gate_signal
 );
@@ -20,12 +19,9 @@ always @(posedge CLOCK_50)begin
 	if(start_btn == 0)begin
 		state <= next_state;
 		if(state == EDGE_DETECT) edge_counter <= edge_counter + 1;
-		if(edge_counter > 193 && response_signal[11:0] == 12'b000110101010) gate_signal <= 0;
-		//if(edge_counter > 130 && response_signal[7:0] == 8'b00000001) gate_signal <= 0;
-		//if(edge_counter > 145) gate_signal <= 0;
+		if(edge_counter > 362 && response_signal[7:0] == 8'b00000000) gate_signal <= 0;
 		else gate_signal <= 1;
 	end
-	else if(resend_btn == 0) edge_counter <= 80;
 	else gate_signal <= 0;
 end
 

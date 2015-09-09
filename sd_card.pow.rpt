@@ -1,5 +1,5 @@
 PowerPlay Power Analyzer report for sd_card
-Thu Aug 20 04:53:30 2015
+Wed Sep 09 22:31:44 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -46,17 +46,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------------+
 ; PowerPlay Power Analyzer Summary                                                          ;
 +----------------------------------------+--------------------------------------------------+
-; PowerPlay Power Analyzer Status        ; Successful - Thu Aug 20 04:53:30 2015            ;
+; PowerPlay Power Analyzer Status        ; Successful - Wed Sep 09 22:31:44 2015            ;
 ; Quartus II 64-Bit Version              ; 13.1.0 Build 162 10/23/2013 SJ Web Edition       ;
 ; Revision Name                          ; sd_card                                          ;
 ; Top-level Entity Name                  ; sd_card                                          ;
 ; Family                                 ; Cyclone IV E                                     ;
 ; Device                                 ; EP4CE115F29C7                                    ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 148.36 mW                                        ;
+; Total Thermal Power Dissipation        ; 149.19 mW                                        ;
 ; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
-; Core Static Thermal Power Dissipation  ; 98.52 mW                                         ;
-; I/O Thermal Power Dissipation          ; 49.84 mW                                         ;
+; Core Static Thermal Power Dissipation  ; 98.53 mW                                         ;
+; I/O Thermal Power Dissipation          ; 50.66 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -69,10 +69,10 @@ applicable agreement for further details.
 ; Use smart compilation                                                      ; Off     ; Off           ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On      ; On            ;
 ; Enable compact report table                                                ; Off     ; Off           ;
+; Use Input Files                                                            ; On      ; Off           ;
 ; Default Power Toggle Rate                                                  ; 12.5%   ; 12.5%         ;
 ; Default Power Input I/O Toggle Rate                                        ; 12.5%   ; 12.5%         ;
 ; Use vectorless estimation                                                  ; On      ; On            ;
-; Use Input Files                                                            ; Off     ; Off           ;
 ; Filter Glitches in VCD File Reader                                         ; On      ; On            ;
 ; Power Analyzer Report Signal Activity                                      ; Off     ; Off           ;
 ; Power Analyzer Report Power Dissipation                                    ; Off     ; Off           ;
@@ -140,7 +140,7 @@ applicable agreement for further details.
 ; Combinational cell  ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Clock control block ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Register cell       ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; I/O                 ; 13.84 mW                          ; 0.00 mW                     ; 13.84 mW                       ; 0.00 mW                       ;    0.000                                                  ;
+; I/O                 ; 14.66 mW                          ; 0.00 mW                     ; 14.66 mW                       ; 0.00 mW                       ;    0.000                                                  ;
 +---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
@@ -150,7 +150,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------+
 ; Compilation Hierarchy Node          ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                               ;
 +-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------+
-; |sd_card                            ; 13.84 mW (13.84 mW)                  ; 0.00 mW (0.00 mW)               ; 13.84 mW (13.84 mW)               ; 0.00 mW (0.00 mW)                 ; |sd_card                                          ;
+; |sd_card                            ; 14.66 mW (14.66 mW)                  ; 0.00 mW (0.00 mW)               ; 14.66 mW (14.66 mW)               ; 0.00 mW (0.00 mW)                 ; |sd_card                                          ;
 ;     |hard_block:auto_generated_inst ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |sd_card|hard_block:auto_generated_inst           ;
 ;     |clock_divisor:clk_div          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |sd_card|clock_divisor:clk_div                    ;
 ;     |sd_controller:sd_contr         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |sd_card|sd_controller:sd_contr                   ;
@@ -177,8 +177,8 @@ applicable agreement for further details.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCINT         ; 16.73 mA                ; 0.00 mA                   ; 16.73 mA                 ; 16.73 mA                         ;
-; VCCIO          ; 12.46 mA                ; 0.00 mA                   ; 12.46 mA                 ; 12.46 mA                         ;
+; VCCINT         ; 17.33 mA                ; 0.00 mA                   ; 17.33 mA                 ; 17.33 mA                         ;
+; VCCIO          ; 12.50 mA                ; 0.00 mA                   ; 12.50 mA                 ; 12.50 mA                         ;
 ; VCCA           ; 35.01 mA                ; 0.00 mA                   ; 35.01 mA                 ; 35.01 mA                         ;
 ; VCCD           ; 2.72 mA                 ; 0.00 mA                   ; 2.72 mA                  ; 2.72 mA                          ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
@@ -197,7 +197,7 @@ applicable agreement for further details.
 ; 4        ; 2.5V          ; 1.50 mA             ; 0.00 mA               ; 1.50 mA              ;
 ; 5        ; 3.3V          ; 1.52 mA             ; 0.00 mA               ; 1.52 mA              ;
 ; 6        ; 3.3V          ; 1.53 mA             ; 0.00 mA               ; 1.53 mA              ;
-; 7        ; 3.3V          ; 1.78 mA             ; 0.00 mA               ; 1.78 mA              ;
+; 7        ; 3.3V          ; 1.81 mA             ; 0.00 mA               ; 1.81 mA              ;
 ; 8        ; 2.5V          ; 1.50 mA             ; 0.00 mA               ; 1.50 mA              ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 
@@ -208,7 +208,7 @@ applicable agreement for further details.
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; 2.5V          ; 4.52 mA                 ; 0.00 mA                   ; 4.52 mA                  ; 4.52 mA                          ;
-; 3.3V          ; 7.95 mA                 ; 0.00 mA                   ; 7.95 mA                  ; 7.95 mA                          ;
+; 3.3V          ; 7.98 mA                 ; 0.00 mA                   ; 7.98 mA                  ; 7.98 mA                          ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -228,16 +228,16 @@ applicable agreement for further details.
 ;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;             ;            ;              ;               ;
 ; Vectorless estimation                                                                  ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 371 (97.6%) ; 25 (73.5%) ; 124 (100.0%) ; 222 (100.0%)  ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 15 (3.9%)   ; 5 (14.7%)  ; 0 (0.0%)     ; 10 (4.5%)     ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 371 (97.6%) ; 25 (73.5%) ; 124 (100.0%) ; 222 (100.0%)  ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 483 (98.2%) ; 27 (75.0%) ; 147 (100.0%) ; 309 (100.0%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 17 (3.5%)   ; 6 (16.7%)  ; 0 (0.0%)     ; 11 (3.6%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 483 (98.2%) ; 27 (75.0%) ; 147 (100.0%) ; 309 (100.0%)  ;
 ;                                                                                        ;             ;            ;              ;               ;
 ; Default assignment                                                                     ;             ;            ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 9 (2.4%)    ; 9 (26.5%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 9 (1.8%)    ; 9 (25.0%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;             ;            ;              ;               ;
 ; Assumed 0                                                                              ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 9 (2.4%)    ; 9 (26.5%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 9 (1.8%)    ; 9 (25.0%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
 +----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
 
 
@@ -255,11 +255,11 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit PowerPlay Power Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Aug 20 04:53:23 2015
+    Info: Processing started: Wed Sep 09 22:31:36 2015
 Info: Command: quartus_pow --read_settings_files=on --write_settings_files=off sd_card -c sd_card
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 10 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'sd_card.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: clock_divisor:clk_div|clk_250k was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
@@ -273,11 +273,11 @@ Warning (215044): No board thermal model was selected.  Analyzing without board 
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 148.36 mW
+Info (215031): Total thermal power estimate for the design is 149.19 mW
 Info: Quartus II 64-Bit PowerPlay Power Analyzer was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 572 megabytes
-    Info: Processing ended: Thu Aug 20 04:53:30 2015
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Wed Sep 09 22:31:44 2015
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 
 

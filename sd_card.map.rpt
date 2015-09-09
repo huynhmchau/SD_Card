@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sd_card
-Thu Sep 03 05:36:42 2015
+Thu Sep 10 02:42:35 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -17,12 +17,11 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   9. User-Specified and Inferred Latches
  10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: clock_divisor:clk_div
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: clock_divisor:clk_div
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,16 +47,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 03 05:36:42 2015      ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 10 02:42:35 2015      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; sd_card                                    ;
 ; Top-level Entity Name              ; sd_card                                    ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 202                                        ;
-;     Total combinational functions  ; 184                                        ;
-;     Dedicated logic registers      ; 143                                        ;
-; Total registers                    ; 143                                        ;
-; Total pins                         ; 27                                         ;
+; Total logic elements               ; 227                                        ;
+;     Total combinational functions  ; 209                                        ;
+;     Dedicated logic registers      ; 146                                        ;
+; Total registers                    ; 146                                        ;
+; Total pins                         ; 24                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -182,28 +181,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 202                            ;
+; Estimated Total logic elements              ; 227                            ;
 ;                                             ;                                ;
-; Total combinational functions               ; 184                            ;
+; Total combinational functions               ; 209                            ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 86                             ;
-;     -- 3 input functions                    ; 17                             ;
-;     -- <=2 input functions                  ; 81                             ;
+;     -- 4 input functions                    ; 90                             ;
+;     -- 3 input functions                    ; 36                             ;
+;     -- <=2 input functions                  ; 83                             ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 140                            ;
+;     -- normal mode                          ; 165                            ;
 ;     -- arithmetic mode                      ; 44                             ;
 ;                                             ;                                ;
-; Total registers                             ; 143                            ;
-;     -- Dedicated logic registers            ; 143                            ;
+; Total registers                             ; 146                            ;
+;     -- Dedicated logic registers            ; 146                            ;
 ;     -- I/O registers                        ; 0                              ;
 ;                                             ;                                ;
-; I/O pins                                    ; 27                             ;
+; I/O pins                                    ; 24                             ;
 ; Embedded Multiplier 9-bit elements          ; 0                              ;
 ; Maximum fan-out node                        ; clock_divisor:clk_div|clk_250k ;
-; Maximum fan-out                             ; 109                            ;
-; Total fan-out                               ; 1054                           ;
-; Average fan-out                             ; 2.74                           ;
+; Maximum fan-out                             ; 112                            ;
+; Total fan-out                               ; 1066                           ;
+; Average fan-out                             ; 2.62                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -212,44 +211,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
-; |sd_card                    ; 184 (2)           ; 143 (0)      ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |sd_card                                          ; work         ;
+; |sd_card                    ; 209 (1)           ; 146 (0)      ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |sd_card                                          ; work         ;
 ;    |clock_divisor:clk_div|  ; 26 (26)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|clock_divisor:clk_div                    ; work         ;
-;    |sd_controller:sd_contr| ; 30 (30)           ; 20 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|sd_controller:sd_contr                   ; work         ;
+;    |sd_controller:sd_contr| ; 25 (25)           ; 20 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|sd_controller:sd_contr                   ; work         ;
 ;       |edge_detect:edged|   ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|sd_controller:sd_contr|edge_detect:edged ; work         ;
-;    |sd_interface:sd_int|    ; 126 (0)           ; 106 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|sd_interface:sd_int                      ; work         ;
-;       |init_block:init|     ; 126 (126)         ; 106 (106)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|sd_interface:sd_int|init_block:init      ; work         ;
+;    |sd_interface:sd_int|    ; 157 (0)           ; 109 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|sd_interface:sd_int                      ; work         ;
+;       |init_block:init|     ; 157 (157)         ; 109 (109)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sd_card|sd_interface:sd_int|init_block:init      ; work         ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |sd_card|sd_interface:sd_int|init_block:init|state                                                             ;
-+----------------------+-----------+----------------------+-----------------+----------------------+-----------------+-----------+
-; Name                 ; state.END ; state.READ_CMD8_RESP ; state.SEND_CMD8 ; state.READ_CMD0_RESP ; state.SEND_CMD0 ; state.000 ;
-+----------------------+-----------+----------------------+-----------------+----------------------+-----------------+-----------+
-; state.000            ; 0         ; 0                    ; 0               ; 0                    ; 0               ; 0         ;
-; state.SEND_CMD0      ; 0         ; 0                    ; 0               ; 0                    ; 1               ; 1         ;
-; state.READ_CMD0_RESP ; 0         ; 0                    ; 0               ; 1                    ; 0               ; 1         ;
-; state.SEND_CMD8      ; 0         ; 0                    ; 1               ; 0                    ; 0               ; 1         ;
-; state.READ_CMD8_RESP ; 0         ; 1                    ; 0               ; 0                    ; 0               ; 1         ;
-; state.END            ; 1         ; 0                    ; 0               ; 0                    ; 0               ; 1         ;
-+----------------------+-----------+----------------------+-----------------+----------------------+-----------------+-----------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |sd_card|sd_interface:sd_int|init_block:init|state                                                                                                                                                       ;
++------------------------+-----------+------------------------+------------------+-----------------------+------------------+----------------------+-----------------+----------------------+-----------------+------------+
+; Name                   ; state.END ; state.READ_ACMD41_RESP ; state.SEND_CMD41 ; state.READ_CMD55_RESP ; state.SEND_CMD55 ; state.READ_CMD8_RESP ; state.SEND_CMD8 ; state.READ_CMD0_RESP ; state.SEND_CMD0 ; state.0000 ;
++------------------------+-----------+------------------------+------------------+-----------------------+------------------+----------------------+-----------------+----------------------+-----------------+------------+
+; state.0000             ; 0         ; 0                      ; 0                ; 0                     ; 0                ; 0                    ; 0               ; 0                    ; 0               ; 0          ;
+; state.SEND_CMD0        ; 0         ; 0                      ; 0                ; 0                     ; 0                ; 0                    ; 0               ; 0                    ; 1               ; 1          ;
+; state.READ_CMD0_RESP   ; 0         ; 0                      ; 0                ; 0                     ; 0                ; 0                    ; 0               ; 1                    ; 0               ; 1          ;
+; state.SEND_CMD8        ; 0         ; 0                      ; 0                ; 0                     ; 0                ; 0                    ; 1               ; 0                    ; 0               ; 1          ;
+; state.READ_CMD8_RESP   ; 0         ; 0                      ; 0                ; 0                     ; 0                ; 1                    ; 0               ; 0                    ; 0               ; 1          ;
+; state.SEND_CMD55       ; 0         ; 0                      ; 0                ; 0                     ; 1                ; 0                    ; 0               ; 0                    ; 0               ; 1          ;
+; state.READ_CMD55_RESP  ; 0         ; 0                      ; 0                ; 1                     ; 0                ; 0                    ; 0               ; 0                    ; 0               ; 1          ;
+; state.SEND_CMD41       ; 0         ; 0                      ; 1                ; 0                     ; 0                ; 0                    ; 0               ; 0                    ; 0               ; 1          ;
+; state.READ_ACMD41_RESP ; 0         ; 1                      ; 0                ; 0                     ; 0                ; 0                    ; 0               ; 0                    ; 0               ; 1          ;
+; state.END              ; 1         ; 0                      ; 0                ; 0                     ; 0                ; 0                    ; 0               ; 0                    ; 0               ; 1          ;
++------------------------+-----------+------------------------+------------------+-----------------------+------------------+----------------------+-----------------+----------------------+-----------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                         ;
-+--------------------------------------------------------------------+-----------------------------------------------+------------------------+
-; Latch Name                                                         ; Latch Enable Signal                           ; Free of Timing Hazards ;
-+--------------------------------------------------------------------+-----------------------------------------------+------------------------+
-; sd_interface:sd_int|init_block:init|next_state.END_1249            ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
-; sd_interface:sd_int|init_block:init|next_state.SEND_CMD0_1281      ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
-; sd_interface:sd_int|init_block:init|next_state.SEND_CMD8_1265      ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
-; sd_interface:sd_int|init_block:init|next_state.READ_CMD0_RESP_1273 ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
-; sd_interface:sd_int|init_block:init|next_state.READ_CMD8_RESP_1257 ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
-; sd_interface:sd_int|init_block:init|next_state.000_1289            ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
-; Number of user-specified and inferred latches = 6                  ;                                               ;                        ;
-+--------------------------------------------------------------------+-----------------------------------------------+------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                           ;
++----------------------------------------------------------------------+-----------------------------------------------+------------------------+
+; Latch Name                                                           ; Latch Enable Signal                           ; Free of Timing Hazards ;
++----------------------------------------------------------------------+-----------------------------------------------+------------------------+
+; sd_interface:sd_int|init_block:init|next_state.END_1287              ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD0_1351        ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD8_1335        ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD55_1319       ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.SEND_CMD41_1303       ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD0_RESP_1343   ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD8_RESP_1327   ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.READ_CMD55_RESP_1311  ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.READ_ACMD41_RESP_1295 ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; sd_interface:sd_int|init_block:init|next_state.0000_1359             ; sd_interface:sd_int|init_block:init|state.END ; yes                    ;
+; Number of user-specified and inferred latches = 10                   ;                                               ;                        ;
++----------------------------------------------------------------------+-----------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -261,7 +268,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; sd_interface:sd_int|init_block:init|state~2 ; Lost fanout        ;
 ; sd_interface:sd_int|init_block:init|state~3 ; Lost fanout        ;
 ; sd_interface:sd_int|init_block:init|state~4 ; Lost fanout        ;
-; Total Number of Removed Registers = 3       ;                    ;
+; sd_interface:sd_int|init_block:init|state~5 ; Lost fanout        ;
+; Total Number of Removed Registers = 4       ;                    ;
 +---------------------------------------------+--------------------+
 
 
@@ -270,25 +278,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 143   ;
+; Total registers                              ; 146   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
-; Number of registers using Synchronous Load   ; 17    ;
-; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 104   ;
+; Number of registers using Clock Enable       ; 95    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------+
-; Inverted Register Statistics                                   ;
-+------------------------------------------------------+---------+
-; Inverted Register                                    ; Fan out ;
-+------------------------------------------------------+---------+
-; sd_interface:sd_int|init_block:init|clock_counter[4] ; 9       ;
-; sd_interface:sd_int|init_block:init|clock_counter[6] ; 7       ;
-; Total number of inverted registers = 2               ;         ;
-+------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -296,10 +293,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |sd_card|sd_interface:sd_int|init_block:init|recv_data[6] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |sd_card|sd_controller:sd_contr|edge_counter[15]          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |sd_card|sd_interface:sd_int|init_block:init|recv_data[1] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |sd_card|sd_interface:sd_int|init_block:init|MOSI[46]     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |sd_card|sd_interface:sd_int|init_block:init|MOSI[15]     ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |sd_card|sd_interface:sd_int|init_block:init|MOSI[13]     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |sd_card|sd_interface:sd_int|init_block:init|MOSI[40]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |sd_card|sd_interface:sd_int|init_block:init|MOSI[44]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -328,7 +326,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Sep 03 05:36:41 2015
+    Info: Processing started: Thu Sep 10 02:42:33 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sd_card -c sd_card
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file sd_interface.sv
@@ -344,33 +342,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file edge_de
 Info (12021): Found 1 design units, including 1 entities, in source file clock_divisor.sv
     Info (12023): Found entity 1: clock_divisor
 Info (12127): Elaborating entity "sd_card" for the top level hierarchy
-Warning (10034): Output port "LEDR[16]" at sd_card.sv(8) has no driver
 Info (12128): Elaborating entity "sd_controller" for hierarchy "sd_controller:sd_contr"
-Warning (10230): Verilog HDL assignment warning at sd_controller.sv(22): truncated value with size 32 to match size of target (16)
-Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(35): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at sd_controller.sv(35): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at sd_controller.sv(21): truncated value with size 32 to match size of target (16)
+Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(31): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at sd_controller.sv(31): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at sd_controller.sv(32): truncated value with size 32 to match size of target (1)
+Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(36): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10230): Verilog HDL assignment warning at sd_controller.sv(36): truncated value with size 32 to match size of target (1)
-Warning (10235): Verilog HDL Always Construct warning at sd_controller.sv(40): variable "clk_250k_edge" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at sd_controller.sv(40): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at sd_controller.sv(41): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at sd_controller.sv(37): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "edge_detect" for hierarchy "sd_controller:sd_contr|edge_detect:edged"
 Info (12128): Elaborating entity "clock_divisor" for hierarchy "clock_divisor:clk_div"
 Warning (10230): Verilog HDL assignment warning at clock_divisor.sv(15): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "sd_interface" for hierarchy "sd_interface:sd_int"
 Info (12128): Elaborating entity "init_block" for hierarchy "sd_interface:sd_int|init_block:init"
-Warning (10230): Verilog HDL assignment warning at init_block.sv(33): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at init_block.sv(28): truncated value with size 32 to match size of target (16)
+Warning (10235): Verilog HDL Always Construct warning at init_block.sv(40): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at init_block.sv(49): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at init_block.sv(58): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at init_block.sv(67): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at init_block.sv(82): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at init_block.sv(91): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10240): Verilog HDL Always Construct warning at init_block.sv(46): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "next_state.END" at init_block.sv(46)
-Info (10041): Inferred latch for "next_state.READ_CMD8_RESP" at init_block.sv(46)
-Info (10041): Inferred latch for "next_state.SEND_CMD8" at init_block.sv(46)
-Info (10041): Inferred latch for "next_state.READ_CMD0_RESP" at init_block.sv(46)
-Info (10041): Inferred latch for "next_state.SEND_CMD0" at init_block.sv(46)
-Info (10041): Inferred latch for "next_state.000" at init_block.sv(46)
+Warning (10235): Verilog HDL Always Construct warning at init_block.sv(76): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at init_block.sv(85): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at init_block.sv(94): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at init_block.sv(103): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at init_block.sv(112): variable "clock_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at init_block.sv(116): variable "response" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at init_block.sv(37): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "next_state.END" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.READ_ACMD41_RESP" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.SEND_CMD41" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.READ_CMD55_RESP" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.SEND_CMD55" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.READ_CMD8_RESP" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.SEND_CMD8" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.READ_CMD0_RESP" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.SEND_CMD0" at init_block.sv(37)
+Info (10041): Inferred latch for "next_state.0000" at init_block.sv(37)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "SD_DAT[3]" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
@@ -379,25 +385,20 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "SD_DAT[2]" has no driver
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "SD_DAT[3]~synth"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[16]" is stuck at GND
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register sd_interface:sd_int|init_block:init|clock_counter[6] will power up to High
-    Critical Warning (18010): Register sd_interface:sd_int|init_block:init|clock_counter[4] will power up to High
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/user/Desktop/SD_CARD/sd_card.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 235 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 20 output pins
+Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 18 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 208 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info (21061): Implemented 237 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
     Info: Peak virtual memory: 471 megabytes
-    Info: Processing ended: Thu Sep 03 05:36:42 2015
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Sep 10 02:42:35 2015
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

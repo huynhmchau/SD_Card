@@ -1,9 +1,13 @@
 
 State Machine - |sd_card|sd_interface:sd_int|init_block:init|state
-Name state.END state.READ_CMD8_RESP state.SEND_CMD8 state.READ_CMD0_RESP state.SEND_CMD0 state.000 
-state.000 0 0 0 0 0 0 
-state.SEND_CMD0 0 0 0 0 1 1 
-state.READ_CMD0_RESP 0 0 0 1 0 1 
-state.SEND_CMD8 0 0 1 0 0 1 
-state.READ_CMD8_RESP 0 1 0 0 0 1 
-state.END 1 0 0 0 0 1 
+Name state.END state.READ_ACMD41_RESP state.SEND_CMD41 state.READ_CMD55_RESP state.SEND_CMD55 state.READ_CMD8_RESP state.SEND_CMD8 state.READ_CMD0_RESP state.SEND_CMD0 state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 
+state.SEND_CMD0 0 0 0 0 0 0 0 0 1 1 
+state.READ_CMD0_RESP 0 0 0 0 0 0 0 1 0 1 
+state.SEND_CMD8 0 0 0 0 0 0 1 0 0 1 
+state.READ_CMD8_RESP 0 0 0 0 0 1 0 0 0 1 
+state.SEND_CMD55 0 0 0 0 1 0 0 0 0 1 
+state.READ_CMD55_RESP 0 0 0 1 0 0 0 0 0 1 
+state.SEND_CMD41 0 0 1 0 0 0 0 0 0 1 
+state.READ_ACMD41_RESP 0 1 0 0 0 0 0 0 0 1 
+state.END 1 0 0 0 0 0 0 0 0 1 
