@@ -1,0 +1,11 @@
+*.bak
+*.rpt
+*.smsg
+*.pin
+*.done
+*.qpf
+*.sof
+*.summary
+*.jdi
+*.qsf
+*.qws
